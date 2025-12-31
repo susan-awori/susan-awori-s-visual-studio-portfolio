@@ -1,0 +1,100 @@
+:root {
+  --primary-brown: #3d2500;
+
+  --bg: #ffeb91;
+  --text: #333;
+  --card: #ffffff;
+  --section-bg: #f4f4f4;
+  --header-bg: #ffebff;
+}
+
+[data-theme="dark"] {
+  --bg: #121212;
+  --text: #f5f5f5;
+  --card: #1e1e1e;
+  --section-bg: #181818;
+  --header-bg: #121212;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  color: #333;
+  line-height: 1.6;
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 10%;
+  background: white;
+  background: var(--header-bg);
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: var(--primary-brown);
+}
+
+nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #666;
+  font-weight: 500;
+}
+
+/* Hero */
+.hero {
+  padding: 100px 10% 60px;
+  background: white;
+  background: var(--bg);
+}
+
+.hero h1 {
+  font-size: 3rem;
+  max-width: 800px;
+  margin-bottom: 20px;
+}
+
+.highlight {
+  color: var(--primary-brown);
+}
+
+.project-grid {
+  padding: 60px 10%;
+  background: var(--light-gray);
+  flex: 1;
+  background: var(--section-bg);
+}
+
+.project-card {
+  background: white;
+  display: flex;
+  align-items: center;
+  padding: 30px;
+  border-radius: 12px;
+  margin-bottom: 40px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  background: var(--card);
+}
+
+.project-info {
+  flex: 1;
+  text-align: left;
+}
+
+/* Footer */
+footer {
+  background: #3d2500;
+  color: white;
+  text-align: center;
+  padding: 30px;
+}
