@@ -1,14 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Susan Awori Portfolio</title>
     <link rel="stylesheet" href="style.css" />
   </head>
+
   <body>
     <header>
-      <div class="logo">Susan Awori | S-Visual Studio</div>
+      <div class="logo">
+        <img
+          src="image/logo.jpg"
+          alt="Description of Image"
+          class="header-image"
+        />
+        Susan Awori | S-Visual Studio
+      </div>
+
       <nav>
         <a href="#about">Info</a>
         <a href="#work">Work</a>
@@ -20,38 +29,107 @@
         >
           Download CV
         </a>
-      </nav>
-      <button id="themeToggle" aria-label="Toggle dark mode">🌙</button>
+      
+
+      <button id="themeToggle" aria-label="Toggle dark mode">☀️</button>
     </header>
 
     <main>
-      <section class="hero">
+      <section class="carousel-container" aria-label="Hero Image Carousel">
+        <div class="carousel-track">
+          <div class="slide">
+            <img
+              src="image/kari-shea-1SAnrIxw5OY-unsplash.jpg"
+              alt="Description of image 1"
+            />
+          </div>
+          <div class="slide">
+            <img
+              src="image/andras-vas-Bd7gNnWJBkU-unsplash.jpg"
+              alt="Description of image 2"
+            />
+          </div>
+          <div class="slide">
+            <img
+              src="image/christin-hume-mfB1B1s4sMc-unsplash.jpg"
+              alt="Description of image 3"
+            />
+          </div>
+        </div>
+      </section>
+
+      <br />
+
+      <section id="about" class="hero" aria-label="Hero Image Carousel">
         <div class="hero-content">
           <h1>
             Building the future of
             <span class="highlight">digital experiences.</span>
           </h1>
+
           <p>
             I'm Susan, a developer and founder of S-Visual Studio. I turn
             complex ideas into elegant, functional code.
           </p>
+
           <div class="hero-btns">
             <a href="#projects" class="btn-primary">View My Work</a>
           </div>
         </div>
       </section>
 
+      <section id="work" class="work-section">
+        <div style="padding: 40px 10%">
+          <h2>Work</h2>
+          <p>
+            Overview of my professional work. Scroll down to see project
+            listings.
+          </p>
+        </div>
+      </section>
+
       <section id="projects" class="project-grid">
-        <div class="project-card">
-          <div class="project-info">
-            <h3>Cow . Grass . Lion</h3>
-            <p>A logic-based strategy game built with Vanilla JavaScript.</p>
-            <div class="tags">
-              <span>HTML</span> <span>CSS</span> <span>JS</span>
+        <div class="project-tabs">
+          <button class="tab active" data-tab="completed">Completed</button>
+          <button class="tab" data-tab="progress">In Progress</button>
+          <button class="tab" data-tab="todo">To Do</button>
+        </div>
+
+        <div class="projects-list" id="completed">
+          <div class="project-card">
+            <div class="project-info">
+              <h3>Cow . Grass . Lion</h3>
+              <p>A logic-based strategy game built with Vanilla JavaScript.</p>
+
+              <div class="tags">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JS</span>
+              </div>
+
+              <a href="#" class="project-link">View Project →</a>
             </div>
-            <a href="#" class="project-link">View Project &rarr;</a>
+
+            <div class="project-img"></div>
           </div>
-          <div class="project-img"></div>
+        </div>
+
+        <div class="projects-list hidden" id="progress">
+          <div class="project-card">
+            <div class="project-info">
+              <h3>Design System Revamp</h3>
+              <p>Currently redesigning component library.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="projects-list hidden" id="todo">
+          <div class="project-card">
+            <div class="project-info">
+              <h3>AI UX Case Study</h3>
+              <p>Upcoming research-driven UX project.</p>
+            </div>
+          </div>
         </div>
       </section>
     </main>
