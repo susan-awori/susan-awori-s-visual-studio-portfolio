@@ -166,3 +166,7 @@ if (contactForm) {
     }
   });
 }
+
+// Automatically update the year in the copyright section
+const yearSpan = document.getElementById("year");
+yearSpan.textContent = new Date().getFullYear();
