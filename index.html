@@ -20,7 +20,7 @@
 
       <nav>
         <a href="#about">Info</a>
-        <a href="#projects">Projects</a>
+        <a href="projects.html" target="_blank">Projects</a>
         <a href="https://github.com/susan-awori" target="_blank">View Code</a>
 
         <a
@@ -35,7 +35,11 @@
     </header>
 
     <main>
-      <section class="carousel-container" aria-label="Hero Image Carousel">
+      <section
+        id="home"
+        class="carousel-container"
+        aria-label="Hero Image Carousel"
+      >
         <div class="carousel-track">
           <div class="slide">
             <div class="slide-text">
@@ -357,8 +361,47 @@
       </div>
     </main>
 
-    <footer>
-      <p>&copy; 2025 Susan Awori Portfolio. All rights reserved.</p>
+    <footer class="site-footer">
+      <div class="footer-container">
+        <div class="footer-column">
+          <h3>Follow Me</h3>
+          <div class="social-links">
+            <ul>
+              <li><a href="#">LinkedIn</a></li>
+              <li><a href="#">Medium</a></li>
+              <li><a href="#">GitHub</a></li>
+              <li><a href="#">Behance</a></li>
+              <li><a href="#">Twitter</a></li>
+              <li><a href="#">Instagram</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-column">
+          <h3>Site Map</h3>
+          <ul>
+            <li><a href="#home" class="site-map-links">Home</a></li>
+            <li><a href="#about" class="site-map-links">About Me</a></li>
+            <li><a href="#work" class="site-map-links">Projects</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h3>Contact</h3>
+          <ul>
+            <li>Email: susanawori15@gmail.com</li>
+            <li>Phone: +254 743 889 672</li>
+            <li>Location: Nairobi, Kenya</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>
+          &copy; <span id="year"></span> 2025 Susan Awori Portfolio. All rights
+          reserved.
+        </p>
+      </div>
     </footer>
 
     <script
