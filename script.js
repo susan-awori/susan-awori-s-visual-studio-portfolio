@@ -110,9 +110,8 @@ const contactForm = document.getElementById("contactForm");
 if (contactForm) {
   const statusEl = document.getElementById("contactStatus");
 
-  // Initialize EmailJS if available (replace YOUR_USER_ID with your EmailJS user ID)
   if (window.emailjs && typeof emailjs.init === "function") {
-    emailjs.init("YOUR_USER_ID");
+    emailjs.init("-z_ZDeZXEq6pON2tv");
   }
 
   contactForm.addEventListener("submit", function (e) {
@@ -124,7 +123,7 @@ if (contactForm) {
     // Use EmailJS if loaded and configured; otherwise fall back to mailto
     if (window.emailjs && typeof emailjs.sendForm === "function") {
       emailjs
-        .sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", "#contactForm")
+        .sendForm("service_mz6yoxo", "template_ml1ns7w", "#contactForm")
         .then(() => {
           if (statusEl) statusEl.textContent = "Message sent — thank you!";
           contactForm.reset();
@@ -146,8 +145,6 @@ if (contactForm) {
             "%0D%0A%0D%0A" +
             message;
           window.location.href = `mailto:susanawori15@gmail.com?subject=${subject}&body=${body}`;
-          name + "%0D%0AEmail: " + email + "%0D%0A%0D%0A" + message;
-          window.location.href = `mailto:youremail@example.com?subject=${subject}&body=${body}`;
         })
         .finally(() => {
           if (submitBtn) submitBtn.disabled = false;
@@ -161,7 +158,6 @@ if (contactForm) {
       const body =
         "Name: " + name + "%0D%0AEmail: " + email + "%0D%0A%0D%0A" + message;
       window.location.href = `mailto:susanawori15@gmail.com?subject=${subject}&body=${body}`;
-      window.location.href = `mailto:youremail@example.com?subject=${subject}&body=${body}`;
       if (submitBtn) submitBtn.disabled = false;
     }
   });
@@ -169,4 +165,41 @@ if (contactForm) {
 
 // Automatically update the year in the copyright section
 const yearSpan = document.getElementById("year");
-yearSpan.textContent = new Date().getFullYear();
+if (yearSpan) yearSpan.textContent = new Date().getFullYear();
+
+console.log("Projects board loaded");
+
+// Lightbox for project-gallery thumbnails
+(function () {
+  const galleryImgs = document.querySelectorAll(".project-gallery img");
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = document.getElementById("lightbox-img");
+  const lightboxClose = document.getElementById("lightbox-close");
+
+  if (!lightbox || !lightboxImg) return;
+
+  function openLightbox(src, alt) {
+    lightboxImg.src = src;
+    lightboxImg.alt = alt || "";
+    lightbox.classList.add("show");
+    lightbox.setAttribute("aria-hidden", "false");
+  }
+
+  function closeLightbox() {
+    lightbox.classList.remove("show");
+    lightbox.setAttribute("aria-hidden", "true");
+    lightboxImg.src = "";
+  }
+
+  galleryImgs.forEach((img) => {
+    img.addEventListener("click", () => openLightbox(img.src, img.alt));
+  });
+
+  lightboxClose && lightboxClose.addEventListener("click", closeLightbox);
+  lightbox.addEventListener("click", (e) => {
+    if (e.target === lightbox || e.target === lightboxImg) closeLightbox();
+  });
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") closeLightbox();
+  });
+})();

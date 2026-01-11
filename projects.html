@@ -1,9 +1,406 @@
 <!DOCTYPE html>
-<html lang="en">
+<html data-theme="light">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Projects</title>
+    <title>My Projects</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
-  <body></body>
+  <body>
+    <header
+      style="
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 18px 6%;
+        background: var(--header-bg);
+      "
+    >
+      <div style="font-weight: 700; color: var(--primary-brown)">
+        Susan Awori | Projects
+      </div>
+      <button
+        id="themeToggle"
+        aria-label="Toggle dark mode"
+        style="background: none; border: none; font-size: 18px; cursor: pointer"
+      >
+        ☀️
+      </button>
+    </header>
+
+    <h1 style="padding: 28px 6%">My Projects</h1>
+
+    <!-- COMPLETED -->
+    <section>
+      <h2>Completed</h2>
+
+      <div class="projects-grid">
+        <article class="project-card">
+          <div
+            class="project-thumb"
+            style="background-image: url('image/logo.jpg')"
+            aria-hidden="true"
+          ></div>
+          <div class="project-body">
+            <h3>
+              Cow, Grass & Lion – Strategy Game
+              <span class="badge">Live</span>
+            </h3>
+            <p>
+              Cow, Grass & Lion – Strategy Game A JavaScript-based strategy game
+              inspired by the ecosystem food chain, reimagining the classic
+              Rock–Paper–Scissors mechanic through biological interactions. Core
+              Concept: Players compete using a cyclic food-chain logic: Lion
+              beats Cow, Cow beats Grass, and Grass beats Lion — simulating the
+              balance of nature in a fun, interactive way. Key Features: Custom
+              in-game console for real-time results (no browser alerts)
+              Interactive 3D-style buttons with hover and active states
+              Color-coded feedback for wins and losses Fully responsive design
+              for mobile, tablet, and desktop Technologies Used: HTML5, CSS3
+              (Flexbox & animations), JavaScript (ES6, DOM manipulation & event
+              handling) Role: Designed and developed the full game experience —
+              UI, game logic, and responsiveness.
+            </p>
+            <div class="project-meta">
+              <div class="tags">
+                <span>HTML</span><span>CSS</span><span>JS</span>
+              </div>
+              <div class="links">
+                <a
+                  class="btn"
+                  href="https://susan-awori.github.io/Cow-Grass-Lion-Game/"
+                  target="_blank"
+                  >Live Demo</a
+                >
+                <a
+                  class="btn"
+                  href="https://github.com/susan-awori/Cow-Grass-Lion-Game.git"
+                  target="_blank"
+                  >Source Code</a
+                >
+              </div>
+            </div>
+            <div class="project-gallery">
+              <img src="image/logo.jpg" alt="Cow Grass Lion - screenshot 1" />
+              <img
+                src="image/andras-vas-Bd7gNnWJBkU-unsplash.jpg"
+                alt="Cow Grass Lion - screenshot 2"
+              />
+              <img
+                src="image/christin-hume-mfB1B1s4sMc-unsplash.jpg"
+                alt="Cow Grass Lion - screenshot 3"
+              />
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div
+            class="project-thumb"
+            style="
+              background-image: url('image/andras-vas-Bd7gNnWJBkU-unsplash.jpg');
+            "
+            aria-hidden="true"
+          ></div>
+          <div class="project-body">
+            <h3>
+              ScanPay – Dynamic QR Code Payment Solution<span class="badge"
+                >Featured</span
+              >
+            </h3>
+            <p>
+              ScanPay is a front-end and UX case study designed to demonstrate a
+              modern solution to common retail payment challenges using dynamic,
+              transaction-specific QR codes. The project focuses on delivering a
+              fast, reliable, and mobile-first payment experience optimized for
+              real-world usage. The core objective of the project was to
+              showcase strong front-end integration, thoughtful user experience
+              design, and technical reliability. This included seamless camera
+              and QR scanning integration, a low-friction single-screen user
+              flow, and consistent performance across different devices and
+              browsers. Key UX and technical highlights include instant QR
+              scanning with fast decoding and rear-camera priority, deployment
+              in a secure HTTPS environment to ensure full camera compatibility,
+              clean interface logic that displays only one view at a time,
+              realistic payment simulation with generated KES transaction
+              values, and a fully mobile-first design suitable for retail
+              environments. The technology stack consists of HTML5 for semantic
+              structure, CSS3 for responsive and mobile-first styling with
+              customizable themes, JavaScript (ES6) for core logic, state
+              management, and DOM manipulation, and the html5-qrcode library for
+              reliable camera and QR functionality. The user flow begins with
+              the application requesting camera permission and opening the
+              scanner. Upon successful QR detection, the camera stops
+              automatically and the transaction details appear for confirmation.
+              Once confirmed, a simulated network delay leads to a final success
+              message, mimicking a real payment process. Throughout development,
+              the project followed the Conventional Commits standard to maintain
+              a clear and organized version history, separating new features,
+              bug fixes, and UI improvements. Role: Designed and developed the
+              complete experience, including UX strategy, interface design, and
+              full front-end implementation.
+            </p>
+            <div class="project-meta">
+              <div class="tags"><span>UI</span><span>Responsive</span></div>
+              <div class="links">
+                <a
+                  class="btn"
+                  href="https://susan-awori.github.io/Dynamic-QR-UX-Case/"
+                  target="_blank"
+                  >Live Demo</a
+                >
+                <a
+                  class="btn"
+                  href="https://github.com/mebjas/html5-qrcode"
+                  target="_blank"
+                  >Source Code</a
+                >
+              </div>
+            </div>
+            <div class="project-gallery">
+              <img
+                src="image/andras-vas-Bd7gNnWJBkU-unsplash.jpg"
+                alt="ScanPay - screenshot 1"
+              />
+              <img
+                src="image/christin-hume-mfB1B1s4sMc-unsplash.jpg"
+                alt="ScanPay - screenshot 2"
+              />
+              <img
+                src="image/kari-shea-1SAnrIxw5OY-unsplash.jpg"
+                alt="ScanPay - screenshot 3"
+              />
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div
+            class="project-thumb"
+            style="
+              background-image: url('image/christin-hume-mfB1B1s4sMc-unsplash.jpg');
+            "
+            aria-hidden="true"
+          ></div>
+          <div class="project-body">
+            <h3>UzaLeo – Modern Seller Onboarding Landing Page</h3>
+            <p>
+              UzaLeo is a high-conversion, responsive single-page marketing
+              website created for a seller onboarding platform. The project
+              focuses on delivering a professional, engaging, and fast user
+              experience that guides potential sellers through the platform’s
+              value and process, ending with a strong call-to-action. The
+              interface was designed with a modern visual style using a
+              high-contrast color palette and the Inter font family to create a
+              clean and trustworthy brand impression. The layout is fully
+              responsive, built with CSS Grid and Flexbox to ensure a seamless
+              experience across mobile, tablet, and desktop devices. Key
+              features include a grid-based testimonial section for displaying
+              social proof in a simple and stable format, smooth animated
+              scrolling for section navigation, and interactive form feedback
+              that improves user engagement even on a static page. The project
+              emphasizes accessibility and SEO through the use of clean,
+              semantic HTML5. The technology stack consists of HTML5 for
+              structure, CSS3 for responsive styling and layout, and JavaScript
+              (ES6+) for interactivity such as smooth scrolling and form
+              handling. The project was built using only vanilla front-end
+              technologies to ensure high performance and broad accessibility.
+              Role: Designed and developed the full landing page experience,
+              from UI design and UX flow to front-end implementation.
+            </p>
+            <div class="project-meta">
+              <div class="tags"><span>Content</span><span>Design</span></div>
+              <div class="links">
+                <a
+                  class="btn"
+                  href="https://susan-awori.github.io/uza-leo-seller-onboarding-page/"
+                  target="_blank"
+                  >Live Demo</a
+                >
+                <a
+                  class="btn"
+                  href="https://github.com/susan-awori/uza-leo-seller-onboarding-page"
+                  target="_blank"
+                  >Source Code</a
+                >
+              </div>
+            </div>
+            <div class="project-gallery">
+              <img
+                src="image/christin-hume-mfB1B1s4sMc-unsplash.jpg"
+                alt="UzaLeo - screenshot 1"
+              />
+              <img src="image/logo.jpg" alt="UzaLeo - screenshot 2" />
+              <img
+                src="image/andras-vas-Bd7gNnWJBkU-unsplash.jpg"
+                alt="UzaLeo - screenshot 3"
+              />
+            </div>
+          </div>
+
+        <article class="project-card">
+          <div
+            class="project-thumb"
+            style="background-image: url('image/logo.jpg');"
+            aria-hidden="true"
+          ></div>
+          <div class="project-body">
+            <h3>Interactive Calendar Web Application</h3>
+            <p>
+              This project is a clean, interactive, and fully responsive
+              calendar application built with HTML, CSS, and JavaScript. It is
+              designed to accurately display and navigate dates while
+              maintaining a simple, intuitive user experience. The calendar
+              allows users to move seamlessly between months and years using
+              clear navigation controls. It dynamically calculates the correct
+              number of days for each month and aligns the grid to the
+              appropriate starting weekday. The current date is visually
+              highlighted, helping users quickly orient themselves within the
+              calendar. The layout adapts smoothly across different screen
+              sizes, making the application usable on both desktop and mobile
+              devices. The application is built using HTML5 for structure, CSS3
+              for visual design and responsive layout, and modern JavaScript
+              (ES6+) for all date logic, including current date detection, month
+              calculations, and dynamic rendering. This project is actively
+              under development and evolving into a full organizational tool.
+              Planned features include event creation and viewing, task
+              management with to-do lists, and persistent data storage using the
+              browser’s local storage, allowing users to retain information even
+              after closing the application. Role: Designed and developed the
+              entire application, including UI design, front-end logic, and
+              responsive behavior.
+            </p>
+            <div class="project-meta">
+              <div class="tags"><span>Content</span><span>Design</span></div>
+              <div class="links">
+                <a
+                  class="btn"
+                  href="https://susan-awori.github.io/SUU-CALENDAR/"
+                  target="_blank"
+                  >Live Demo</a
+                >
+                <a
+                  class="btn"
+                  href="https://github.com/susan-awori/SUU-CALENDAR"
+                  target="_blank"
+                  >Source Code</a
+                >
+              </div>
+            </div>
+            <div class="project-gallery">
+              <img
+                src="image/christin-hume-mfB1B1s4sMc-unsplash.jpg"
+                alt="Calendar - shot 1"
+              />
+              <img src="image/logo.jpg" alt="Calendar - shot 2" />
+              <img
+                src="image/andras-vas-Bd7gNnWJBkU-unsplash.jpg"
+                alt="Calendar - shot 3"
+              />
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- IN PROGRESS -->
+    <section>
+      <h2>In Progress</h2>
+      <div class="projects-grid">
+        <article class="project-card small">
+          <div
+            class="project-thumb"
+            style="
+              background-image: url('image/kari-shea-1SAnrIxw5OY-unsplash.jpg');
+            "
+          ></div>
+          <div class="project-body">
+            <h3>E-Commerce App <span class="badge pending">Working</span></h3>
+            <p>
+              An online store with cart functionality and product filtering.
+            </p>
+            <div class="project-meta">
+              <div class="tags"><span>React</span><span>API</span></div>
+            </div>
+            <div class="project-gallery">
+              <img
+                src="image/kari-shea-1SAnrIxw5OY-unsplash.jpg"
+                alt="E-Commerce - shot 1"
+              />
+              <img
+                src="image/andras-vas-Bd7gNnWJBkU-unsplash.jpg"
+                alt="E-Commerce - shot 2"
+              />
+              <img src="image/logo.jpg" alt="E-Commerce - shot 3" />
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card small">
+          <div
+            class="project-thumb"
+            style="
+              background-image: url('image/kari-shea-1SAnrIxw5OY-unsplash.jpg');
+            "
+          ></div>
+          <div class="project-body">
+            <h3>Weather App <span class="badge pending">API</span></h3>
+            <p>A web app that fetches real-time weather data using APIs.</p>
+            <div class="project-meta">
+              <div class="tags"><span>API</span><span>JS</span></div>
+            </div>
+            <div class="project-gallery">
+              <img
+                src="image/kari-shea-1SAnrIxw5OY-unsplash.jpg"
+                alt="Weather - shot 1"
+              />
+              <img src="image/logo.jpg" alt="Weather - shot 2" />
+              <img
+                src="image/andras-vas-Bd7gNnWJBkU-unsplash.jpg"
+                alt="Weather - shot 3"
+              />
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- TO DO -->
+    <section>
+      <h2> To Do</h2>
+      <div class="projects-grid">
+        <article class="project-card small">
+          <div
+            class="project-thumb"
+            style="background-image: url('image/logo.jpg')"
+          ></div>
+          <div class="project-body">
+            <h3>Chat Application</h3>
+            <p>Real-time messaging app with user authentication.</p>
+            <div class="project-meta">
+              <div class="tags"><span>Realtime</span><span>Auth</span></div>
+            </div>
+            <div class="project-gallery">
+              <img src="image/logo.jpg" alt="Chat - shot 1" />
+              <img
+                src="image/kari-shea-1SAnrIxw5OY-unsplash.jpg"
+                alt="Chat - shot 2"
+              />
+              <img
+                src="image/andras-vas-Bd7gNnWJBkU-unsplash.jpg"
+                alt="Chat - shot 3"
+              />
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Lightbox for project images -->
+    <div id="lightbox" class="lightbox" aria-hidden="true">
+      <button id="lightbox-close" aria-label="Close" class="lightbox-close">
+        ×
+      </button>
+      <img id="lightbox-img" src="" alt="" />
+    </div>
+  </body>
+  <script src="script.js"></script>
 </html>
