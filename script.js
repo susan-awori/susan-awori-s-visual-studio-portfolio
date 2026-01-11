@@ -104,3 +104,102 @@ tabs.forEach((tab) => {
   // start
   startAutoplay();
 })();
+
+const contactForm = document.getElementById("contactForm");
+
+if (contactForm) {
+  const statusEl = document.getElementById("contactStatus");
+
+  if (window.emailjs && typeof emailjs.init === "function") {
+    emailjs.init("-z_ZDeZXEq6pON2tv");
+  }
+
+  contactForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+    if (statusEl) statusEl.textContent = "Sending...";
+    const submitBtn = contactForm.querySelector('button[type="submit"]');
+    if (submitBtn) submitBtn.disabled = true;
+
+    // Use EmailJS if loaded and configured; otherwise fall back to mailto
+    if (window.emailjs && typeof emailjs.sendForm === "function") {
+      emailjs
+        .sendForm("service_mz6yoxo", "template_ml1ns7w", "#contactForm")
+        .then(() => {
+          if (statusEl) statusEl.textContent = "Message sent — thank you!";
+          contactForm.reset();
+        })
+        .catch((err) => {
+          console.error("EmailJS error:", err);
+          if (statusEl)
+            statusEl.textContent = "Error sending message — trying fallback.";
+          // fallback to mailto
+          const name = document.getElementById("name").value;
+          const email = document.getElementById("email").value;
+          const message = document.getElementById("message").value;
+          const subject = "New Contact Message from " + name;
+          const body =
+            "Name: " +
+            name +
+            "%0D%0AEmail: " +
+            email +
+            "%0D%0A%0D%0A" +
+            message;
+          window.location.href = `mailto:susanawori15@gmail.com?subject=${subject}&body=${body}`;
+        })
+        .finally(() => {
+          if (submitBtn) submitBtn.disabled = false;
+        });
+    } else {
+      // fallback: open user's mail client
+      const name = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
+      const message = document.getElementById("message").value;
+      const subject = "New Contact Message from " + name;
+      const body =
+        "Name: " + name + "%0D%0AEmail: " + email + "%0D%0A%0D%0A" + message;
+      window.location.href = `mailto:susanawori15@gmail.com?subject=${subject}&body=${body}`;
+      if (submitBtn) submitBtn.disabled = false;
+    }
+  });
+}
+
+// Automatically update the year in the copyright section
+const yearSpan = document.getElementById("year");
+if (yearSpan) yearSpan.textContent = new Date().getFullYear();
+
+console.log("Projects board loaded");
+
+// Lightbox for project-gallery thumbnails
+(function () {
+  const galleryImgs = document.querySelectorAll(".project-gallery img");
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = document.getElementById("lightbox-img");
+  const lightboxClose = document.getElementById("lightbox-close");
+
+  if (!lightbox || !lightboxImg) return;
+
+  function openLightbox(src, alt) {
+    lightboxImg.src = src;
+    lightboxImg.alt = alt || "";
+    lightbox.classList.add("show");
+    lightbox.setAttribute("aria-hidden", "false");
+  }
+
+  function closeLightbox() {
+    lightbox.classList.remove("show");
+    lightbox.setAttribute("aria-hidden", "true");
+    lightboxImg.src = "";
+  }
+
+  galleryImgs.forEach((img) => {
+    img.addEventListener("click", () => openLightbox(img.src, img.alt));
+  });
+
+  lightboxClose && lightboxClose.addEventListener("click", closeLightbox);
+  lightbox.addEventListener("click", (e) => {
+    if (e.target === lightbox || e.target === lightboxImg) closeLightbox();
+  });
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") closeLightbox();
+  });
+})();

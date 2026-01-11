@@ -20,8 +20,9 @@
 
       <nav>
         <a href="#about">Info</a>
-        <a href="#work">Work</a>
-        <a href="#projects">Projects</a>
+        <a href="projects.html" target="_blank">Projects</a>
+        <a href="https://github.com/susan-awori" target="_blank">View Code</a>
+
         <a
           href="assets/Susan_Resume_2025.pdf"
           download="Susan_Resume_2025.pdf"
@@ -34,25 +35,116 @@
     </header>
 
     <main>
-      <section class="carousel-container" aria-label="Hero Image Carousel">
+      <section
+        id="home"
+        class="carousel-container"
+        aria-label="Hero Image Carousel"
+      >
         <div class="carousel-track">
           <div class="slide">
-            <img
-              src="image/kari-shea-1SAnrIxw5OY-unsplash.jpg"
-              alt="Description of image 1"
-            />
+            <div class="slide-text">
+              <div class="slide-text-inner">
+                <h2>Welcome to My Portfolio</h2>
+                <p>
+                  Crafting seamless digital experiences through code and
+                  creativity.
+                </p>
+                <a
+                  href="https://github.com/susan-awori"
+                  target="_blank"
+                  style="
+                    display: inline-block;
+                    background-color: var(--secondary-color);
+                    color: var(--text-color-dark);
+                    padding: 0.75rem 1.5rem;
+                    border: none;
+                    border-radius: 0.5rem;
+                    font-weight: 600;
+                    text-decoration: none;
+                    cursor: pointer;
+                    transition: background-color 0.3s ease;
+                  "
+                  >View Work</a
+                >
+              </div>
+            </div>
+            <div class="slide-image">
+              <img
+                src="image/kari-shea-1SAnrIxw5OY-unsplash.jpg"
+                alt="Description of image 1"
+              />
+            </div>
           </div>
+
           <div class="slide">
-            <img
-              src="image/andras-vas-Bd7gNnWJBkU-unsplash.jpg"
-              alt="Description of image 2"
-            />
+            <div class="slide-text">
+              <div class="slide-text-inner">
+                <h2>I Turn Ideas Into Digital Solutions</h2>
+                <p>
+                  I’m a self-taught Web Developer, Designer, and Content
+                  Strategist. I create websites and content that help ideas
+                  grow.From concept to code — thoughtful solutions that scale.
+                </p>
+                <a
+                  href="#projects"
+                  style="
+                    display: inline-block;
+                    background-color: var(--secondary-color);
+                    color: var(--text-color-dark);
+                    padding: 0.75rem 1.5rem;
+                    border: none;
+                    border-radius: 0.5rem;
+                    font-weight: 600;
+                    text-decoration: none;
+                    cursor: pointer;
+                    transition: background-color 0.3s ease;
+                  "
+                  >See Projects</a
+                >
+              </div>
+            </div>
+            <div class="slide-image">
+              <img
+                src="image/andras-vas-Bd7gNnWJBkU-unsplash.jpg"
+                alt="Description of image 2"
+              />
+            </div>
           </div>
+
           <div class="slide">
-            <img
-              src="image/christin-hume-mfB1B1s4sMc-unsplash.jpg"
-              alt="Description of image 3"
-            />
+            <div class="slide-text">
+              <div class="slide-text-inner">
+                <h2>Let’s Build Something Together</h2>
+                <p>
+                  Follow my journey, check out my projects, and get in touch.
+                  Exciting things are coming
+                </p>
+                <a
+                  href="https://www.linkedin.com/in/susan-awori"
+                  target="_blank"
+                  style="
+                    display: inline-block;
+                    background-color: var(--secondary-color);
+                    color: var(--text-color-dark);
+                    padding: 0.75rem 1.5rem;
+                    border: none;
+                    border-radius: 0.5rem;
+                    font-weight: 600;
+                    text-decoration: none;
+                    cursor: pointer;
+                    transition: background-color 0.3s ease;
+                  "
+                >
+                  Connect Now
+                </a>
+              </div>
+            </div>
+            <div class="slide-image">
+              <img
+                src="image/christin-hume-mfB1B1s4sMc-unsplash.jpg"
+                alt="Description of image 3"
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -68,18 +160,38 @@
 
           <p>
             I'm Susan, a developer and founder of S-Visual Studio. I turn
-            complex ideas into elegant, functional code.
+            complex ideas into elegant, functional code.<br />
+            I’m a passionate self-taught developer and content strategist
+            focused on building clean, functional digital experiences. I enjoy
+            turning ideas into real solutions and I’m continuously learning and
+            growing in modern technologies.
           </p>
 
           <div class="hero-btns">
-            <a href="#projects" class="btn-primary">View My Work</a>
+            <a
+              href="https://medium.com/@susan-awori/"
+              target="_blank"
+              style="
+                display: inline-block;
+                background-color: var(--secondary-color);
+                color: var(--text-color-dark);
+                padding: 0.75rem 1.5rem;
+                border: none;
+                border-radius: 0.5rem;
+                font-weight: 600;
+                text-decoration: none;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+              "
+              >Read My Story</a
+            >
           </div>
         </div>
       </section>
 
       <section id="work" class="work-section">
         <div style="padding: 40px 10%">
-          <h2>Work</h2>
+          <h1>Projects</h1>
           <p>
             Overview of my professional work. Scroll down to see project
             listings.
@@ -87,56 +199,218 @@
         </div>
       </section>
 
-      <section id="projects" class="project-grid">
-        <div class="project-tabs">
-          <button class="tab active" data-tab="completed">Completed</button>
-          <button class="tab" data-tab="progress">In Progress</button>
-          <button class="tab" data-tab="todo">To Do</button>
-        </div>
+      <div class="content-wrapper">
+        <aside class="sidebar">
+          <div class="sidebar-widget">
+            <h3>Skills</h3>
+            <ul>
+              <li>HTML, CSS, JavaScript</li>
+              <li>UI/UX Design</li>
+              <li>Git & GitHub</li>
+              <li>Content Strategy</li>
+              <li>Branding & Social Media</li>
+            </ul>
+          </div>
 
-        <div class="projects-list" id="completed">
-          <div class="project-card">
-            <div class="project-info">
-              <h3>Cow . Grass . Lion</h3>
-              <p>A logic-based strategy game built with Vanilla JavaScript.</p>
+          <div class="sidebar-widget">
+            <h3>Stay Connected</h3>
+            <p style="font-size: 0.9rem; margin-bottom: 1rem">
+              Don't miss a single post! Follow me on LinkedIn to stay updated
+              with my latest projects, insights, and professional journey.<br />
+              More exciting content coming soon.
+            </p>
 
-              <div class="tags">
-                <span>HTML</span>
-                <span>CSS</span>
-                <span>JS</span>
+            <a
+              href="https://www.linkedin.com/in/susan-awori"
+              target="_blank"
+              style="
+                display: inline-block;
+                background-color: var(--secondary-color);
+                color: var(--text-color-dark);
+                padding: 0.75rem 1.5rem;
+                border: none;
+                border-radius: 0.5rem;
+                font-weight: 600;
+                text-decoration: none;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+              "
+            >
+              Connect Now
+            </a>
+          </div>
+
+          <div id="Contact" class="sidebar-widget">
+            <h3>Contact Me</h3>
+            <form id="contactForm">
+              <input
+                type="text"
+                id="name"
+                name="from_name"
+                placeholder="Your Name"
+                required
+              />
+              <input
+                type="email"
+                id="email"
+                name="reply_to"
+                placeholder="Your Email"
+                required
+              />
+              <textarea
+                id="message"
+                name="message"
+                placeholder="Your Message"
+                required
+              ></textarea>
+              <div
+                id="contactStatus"
+                role="status"
+                class="form-note"
+                aria-live="polite"
+              ></div>
+              <button type="submit" class="btn">Send Message</button>
+            </form>
+          </div>
+        </aside>
+
+        <section id="projects" class="project-grid">
+          <div class="project-tabs">
+            <button class="tab active" data-tab="completed">Completed</button>
+            <button class="tab" data-tab="progress">In Progress</button>
+            <button class="tab" data-tab="todo">To Do</button>
+          </div>
+
+          <div class="projects-list" id="completed">
+            <div class="project-card">
+              <div class="project-info">
+                <h3>Cow . Grass . Lion</h3>
+                <p>
+                  A logic-based strategy game built with Vanilla JavaScript.
+                </p>
+
+                <div class="tags">
+                  <span>HTML</span>
+                  <span>CSS</span>
+                  <span>JS</span>
+                </div>
+
+                <a href="#" class="project-link">View Project →</a>
               </div>
 
-              <a href="#" class="project-link">View Project →</a>
+              <div class="project-img"></div>
             </div>
 
-            <div class="project-img"></div>
-          </div>
-        </div>
+            <div class="project-card">
+              <div class="project-info">
+                <h3>Cow . Grass . Lion</h3>
+                <p>
+                  A logic-based strategy game built with Vanilla JavaScript.
+                </p>
 
-        <div class="projects-list hidden" id="progress">
-          <div class="project-card">
-            <div class="project-info">
-              <h3>Design System Revamp</h3>
-              <p>Currently redesigning component library.</p>
+                <div class="tags">
+                  <span>HTML</span>
+                  <span>CSS</span>
+                  <span>JS</span>
+                </div>
+
+                <a href="#" class="project-link">View Project →</a>
+              </div>
+
+              <div class="project-img"></div>
+            </div>
+
+            <div class="project-card">
+              <div class="project-info">
+                <h3>Cow . Grass . Lion</h3>
+                <p>
+                  A logic-based strategy game built with Vanilla JavaScript.
+                </p>
+
+                <div class="tags">
+                  <span>HTML</span>
+                  <span>CSS</span>
+                  <span>JS</span>
+                </div>
+
+                <a href="#" class="project-link">View Project →</a>
+              </div>
+
+              <div class="project-img"></div>
             </div>
           </div>
-        </div>
 
-        <div class="projects-list hidden" id="todo">
-          <div class="project-card">
-            <div class="project-info">
-              <h3>AI UX Case Study</h3>
-              <p>Upcoming research-driven UX project.</p>
+          <div class="projects-list hidden" id="progress">
+            <div class="project-card">
+              <div class="project-info">
+                <h3>Design System Revamp</h3>
+                <p>Currently redesigning component library.</p>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+
+          <div class="projects-list hidden" id="todo">
+            <div class="project-card">
+              <div class="project-info">
+                <h3>AI UX Case Study</h3>
+                <p>Upcoming research-driven UX project.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
     </main>
 
-    <footer>
-      <p>&copy; 2025 Susan Awori Portfolio. All rights reserved.</p>
+    <footer class="site-footer">
+      <div class="footer-container">
+        <div class="footer-column">
+          <h3>Follow Me</h3>
+          <div class="social-links">
+            <ul>
+              <li><a href="www.linkedin.com/in/susan-awori">LinkedIn</a></li>
+              <li><a href="https://medium.com/@susan-awori/">Medium</a></li>
+              <li><a href="https://github.com/susan-awori">GitHub</a></li>
+              <li><a href="https://www.behance.net/susanawori">Behance</a></li>
+              <li><a href="https://dribbble.com/susan-awori">Dribbble</a></li>
+              <li><a href="https://x.com/susan_awori">Twitter</a></li>
+              <li>
+                <a href="https://www.instagram.com/suzisuu_/">Instagram</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-column">
+          <h3>Site Map</h3>
+          <ul>
+            <li><a href="#home" class="site-map-links">Home</a></li>
+            <li><a href="#about" class="site-map-links">About Me</a></li>
+            <li><a href="#work" class="site-map-links">Projects</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h3>Contact</h3>
+          <ul>
+            <li>Email: susanawori15@gmail.com</li>
+            <li>Phone: +254 743 889 672</li>
+            <li>Location: Nairobi, Kenya</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>
+          &copy; <span id="year"></span> Susan Awori Portfolio. All rights
+          reserved.
+        </p>
+      </div>
     </footer>
 
+    <script
+      type="text/javascript"
+      src="https://cdn.emailjs.com/sdk/3.2.0/email.min.js"
+    ></script>
     <script src="script.js"></script>
   </body>
 </html>
