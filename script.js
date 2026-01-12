@@ -105,6 +105,7 @@ tabs.forEach((tab) => {
   startAutoplay();
 })();
 
+/* Contact form */
 const contactForm = document.getElementById("contactForm");
 
 if (contactForm) {
