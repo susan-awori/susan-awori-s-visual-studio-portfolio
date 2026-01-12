@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Susan Awori Portfolio</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/x-icon" href="image/logo.png" />
   </head>
 
   <body>
@@ -12,7 +13,7 @@
       <div class="logo">
         <img
           src="image/logo.jpg"
-          alt="Description of Image"
+          alt="susan awori picture"
           class="header-image"
         />
         Susan Awori | S-Visual Studio
@@ -69,10 +70,7 @@
               </div>
             </div>
             <div class="slide-image">
-              <img
-                src="image/kari-shea-1SAnrIxw5OY-unsplash.jpg"
-                alt="Description of image 1"
-              />
+              <img src="image/kari-shea-1SAnrIxw5OY-unsplash.jpg" />
             </div>
           </div>
 
@@ -104,10 +102,7 @@
               </div>
             </div>
             <div class="slide-image">
-              <img
-                src="image/andras-vas-Bd7gNnWJBkU-unsplash.jpg"
-                alt="Description of image 2"
-              />
+              <img src="image/andras-vas-Bd7gNnWJBkU-unsplash.jpg" />
             </div>
           </div>
 
@@ -140,10 +135,7 @@
               </div>
             </div>
             <div class="slide-image">
-              <img
-                src="image/christin-hume-mfB1B1s4sMc-unsplash.jpg"
-                alt="Description of image 3"
-              />
+              <img src="image/christin-hume-mfB1B1s4sMc-unsplash.jpg" />
             </div>
           </div>
         </div>
@@ -269,7 +261,13 @@
                 class="form-note"
                 aria-live="polite"
               ></div>
-              <button type="submit" class="btn">Send Message</button>
+              <button
+                type="submit"
+                class="btn"
+                title="Currently undergoing maintenance - please use email link below"
+              >
+                Send Message
+              </button>
             </form>
           </div>
         </aside>
@@ -284,9 +282,11 @@
           <div class="projects-list" id="completed">
             <div class="project-card">
               <div class="project-info">
-                <h3>Cow . Grass . Lion</h3>
+                <h3>Cow, Grass & Lion – Strategy Game</h3>
                 <p>
-                  A logic-based strategy game built with Vanilla JavaScript.
+                  Core Concept: Players compete using a cyclic food-chain logic:
+                  Lion beats Cow, Cow beats Grass, and Grass beats Lion —
+                  simulating the balance of nature in a fun, interactive way.
                 </p>
 
                 <div class="tags">
@@ -295,17 +295,19 @@
                   <span>JS</span>
                 </div>
 
-                <a href="#" class="project-link">View Project →</a>
+                <a href="projects.html#project1" class="project-link"
+                  >View Project →</a
+                >
               </div>
-
-              <div class="project-img"></div>
             </div>
 
             <div class="project-card">
               <div class="project-info">
-                <h3>Cow . Grass . Lion</h3>
+                <h3>ScanPay – Dynamic QR Code Payment Solution</h3>
                 <p>
-                  A logic-based strategy game built with Vanilla JavaScript.
+                  The project focuses on delivering a fast, reliable, and
+                  mobile-first payment experience optimized for real-world
+                  usage.
                 </p>
 
                 <div class="tags">
@@ -314,17 +316,20 @@
                   <span>JS</span>
                 </div>
 
-                <a href="#" class="project-link">View Project →</a>
+                <a href="projects.html#project2" class="project-link"
+                  >View Project →</a
+                >
               </div>
-
-              <div class="project-img"></div>
             </div>
 
             <div class="project-card">
               <div class="project-info">
-                <h3>Cow . Grass . Lion</h3>
+                <h3>UzaLeo – Modern Seller Onboarding Landing Page</h3>
                 <p>
-                  A logic-based strategy game built with Vanilla JavaScript.
+                  The project focuses on delivering a professional, engaging,
+                  and fast user experience that guides potential sellers through
+                  the platform’s value and process, ending with a strong
+                  call-to-action.
                 </p>
 
                 <div class="tags">
@@ -333,18 +338,20 @@
                   <span>JS</span>
                 </div>
 
-                <a href="#" class="project-link">View Project →</a>
+                <a href="projects.html#project3" class="project-link"
+                  >View Project →</a
+                >
               </div>
-
-              <div class="project-img"></div>
             </div>
           </div>
 
           <div class="projects-list hidden" id="progress">
             <div class="project-card">
               <div class="project-info">
-                <h3>Design System Revamp</h3>
-                <p>Currently redesigning component library.</p>
+                <h3>E-Commerce App</h3>
+                <p>
+                  React store with cart functionality and product filtering.
+                </p>
               </div>
             </div>
           </div>
@@ -409,7 +416,7 @@
 
     <script
       type="text/javascript"
-      src="https://cdn.emailjs.com/sdk/3.2.0/email.min.js"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
     ></script>
     <script src="script.js"></script>
   </body>
