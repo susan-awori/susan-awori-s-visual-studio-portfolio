@@ -111,8 +111,15 @@ const contactForm = document.getElementById("contactForm");
 if (contactForm) {
   const statusEl = document.getElementById("contactStatus");
 
+  // Initialize EmailJS if available so send/sendForm works reliably
+  const EMAILJS_PUBLIC_KEY = "-z_ZDeZXEq6pON2tv";
   if (window.emailjs && typeof emailjs.init === "function") {
-    emailjs.init("-z_ZDeZXEq6pON2tv");
+    try {
+      emailjs.init(EMAILJS_PUBLIC_KEY);
+      console.log("EmailJS initialized with public key.");
+    } catch (err) {
+      console.warn("EmailJS init failed:", err);
+    }
   }
 
   contactForm.addEventListener("submit", function (e) {
@@ -123,41 +130,46 @@ if (contactForm) {
 
     // Use EmailJS if loaded and configured; otherwise fall back to mailto
     if (window.emailjs && typeof emailjs.sendForm === "function") {
+      const formEl = contactForm; // pass the element rather than selector
+      console.log("Attempting to send contact form via EmailJS...");
       emailjs
-        .sendForm("service_mz6yoxo", "template_ml1ns7w", "#contactForm")
-        .then(() => {
+        .sendForm("service_mz6yoxo", "template_ml1ns7w", formEl)
+        .then((response) => {
+          console.log("EmailJS response:", response);
           if (statusEl) statusEl.textContent = "Message sent — thank you!";
           contactForm.reset();
+          if (submitBtn) submitBtn.disabled = false;
         })
         .catch((err) => {
           console.error("EmailJS error:", err);
+          const errMsg =
+            (err && (err.text || err.message)) ||
+            JSON.stringify(err) ||
+            "Unknown error";
           if (statusEl)
-            statusEl.textContent = "Error sending message — trying fallback.";
-          // fallback to mailto
-          const name = document.getElementById("name").value;
-          const email = document.getElementById("email").value;
-          const message = document.getElementById("message").value;
-          const subject = "New Contact Message from " + name;
-          const body =
-            "Name: " +
-            name +
-            "%0D%0AEmail: " +
-            email +
-            "%0D%0A%0D%0A" +
-            message;
+            statusEl.textContent = `Error sending message: ${errMsg}`;
+          // Keep original fallback: open mail client as a last-resort
+          const name = document.getElementById("name").value || "";
+          const email = document.getElementById("email").value || "";
+          const message = document.getElementById("message").value || "";
+          const subject = encodeURIComponent(
+            "New Contact Message from " + name
+          );
+          const body = encodeURIComponent(
+            "Name: " + name + "\nEmail: " + email + "\n\n" + message
+          );
           window.location.href = `mailto:susanawori15@gmail.com?subject=${subject}&body=${body}`;
-        })
-        .finally(() => {
           if (submitBtn) submitBtn.disabled = false;
         });
     } else {
       // fallback: open user's mail client
-      const name = document.getElementById("name").value;
-      const email = document.getElementById("email").value;
-      const message = document.getElementById("message").value;
-      const subject = "New Contact Message from " + name;
-      const body =
-        "Name: " + name + "%0D%0AEmail: " + email + "%0D%0A%0D%0A" + message;
+      const name = document.getElementById("name").value || "";
+      const email = document.getElementById("email").value || "";
+      const message = document.getElementById("message").value || "";
+      const subject = encodeURIComponent("New Contact Message from " + name);
+      const body = encodeURIComponent(
+        "Name: " + name + "\nEmail: " + email + "\n\n" + message
+      );
       window.location.href = `mailto:susanawori15@gmail.com?subject=${subject}&body=${body}`;
       if (submitBtn) submitBtn.disabled = false;
     }
