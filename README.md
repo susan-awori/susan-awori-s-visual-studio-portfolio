@@ -2,6 +2,10 @@
 
 A professional showcase of frontend development projects focusing on clean logic, responsive design, and user experience.
 
+# Live link 
+
+https://susan-awori.github.io/susan-awori-s-visual-studio-portfolio/
+
 ## Technical Skills
 
 - Languages: HTML5, CSS3, JavaScript (ES6+)
