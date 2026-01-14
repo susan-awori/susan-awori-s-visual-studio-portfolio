@@ -10,6 +10,38 @@ document.addEventListener("DOMContentLoaded", () => {
       header.style.boxShadow = "none";
     }
   });
+
+  // Hamburger menu toggle
+  const hamburger = document.getElementById("hamburger");
+  const navMenu = document.getElementById("mobileNav");
+
+  if (hamburger && navMenu) {
+    hamburger.addEventListener("click", () => {
+      hamburger.classList.toggle("active");
+      navMenu.classList.toggle("active");
+    });
+
+    // Close menu when a link is clicked
+    const navLinks = navMenu.querySelectorAll("a");
+    navLinks.forEach((link) => {
+      link.addEventListener("click", () => {
+        hamburger.classList.remove("active");
+        navMenu.classList.remove("active");
+      });
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener("click", (e) => {
+      if (
+        !hamburger.contains(e.target) &&
+        !navMenu.contains(e.target) &&
+        navMenu.classList.contains("active")
+      ) {
+        hamburger.classList.remove("active");
+        navMenu.classList.remove("active");
+      }
+    });
+  }
 });
 
 const toggle = document.getElementById("themeToggle");
