@@ -52,7 +52,7 @@ if (toggle) {
 
     document.documentElement.setAttribute(
       "data-theme",
-      currentTheme === "dark" ? "light" : "dark"
+      currentTheme === "dark" ? "light" : "dark",
     );
 
     toggle.textContent = currentTheme === "dark" ? "🌙" : "☀️";
@@ -127,7 +127,7 @@ tabs.forEach((tab) => {
         goToSlide(idx);
       }, 150);
     },
-    { passive: true }
+    { passive: true },
   );
 
   // Keep position on resize
@@ -164,6 +164,8 @@ if (contactForm) {
 
     if (window.emailjs && typeof emailjs.sendForm === "function") {
       const formEl = contactForm;
+
+      // Service and Template IDs
       const serviceID = "service_mz6yoxo";
       const templateID = "template_ml1ns7w";
 
@@ -173,7 +175,7 @@ if (contactForm) {
       Promise.race([
         emailjs.sendForm(serviceID, templateID, formEl),
         new Promise((_, reject) =>
-          setTimeout(() => reject(new Error("Timeout")), 15000)
+          setTimeout(() => reject(new Error("Timeout")), 15000),
         ),
       ])
         .then((response) => {
@@ -185,7 +187,6 @@ if (contactForm) {
         .catch((err) => {
           console.error("EmailJS error:", err);
           const errMsg = (err && (err.text || err.message)) || "Unknown error";
-
           if (statusEl)
             statusEl.textContent = `Error: ${errMsg}. Redirecting to email...`;
 
@@ -194,21 +195,19 @@ if (contactForm) {
           const email = document.getElementById("email").value || "";
           const message = document.getElementById("message").value || "";
           const subject = encodeURIComponent(
-            "New Contact Message from " + name
+            "New Contact Message from " + name,
           );
           const body = encodeURIComponent(
-            "Name: " + name + "\nEmail: " + email + "\n\n" + message
+            "Name: " + name + "\nEmail: " + email + "\n\n" + message,
           );
 
           window.location.href = `mailto:susanawori15@gmail.com?subject=${subject}&body=${body}`;
           if (submitBtn) submitBtn.disabled = false;
         });
-    } else {
-      // Fallback if SDK fails to load
-      // ... (Rest of your existing mailto logic)
     }
   });
 }
+
 // Automatically update the year in the copyright section
 const yearSpan = document.getElementById("year");
 if (yearSpan) yearSpan.textContent = new Date().getFullYear();
