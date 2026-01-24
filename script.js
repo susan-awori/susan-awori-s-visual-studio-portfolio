@@ -180,7 +180,9 @@ if (contactForm) {
       ])
         .then((response) => {
           console.log("EmailJS response:", response);
-          if (statusEl) statusEl.textContent = "Message sent — thank you!";
+          if (statusEl)
+            statusEl.textContent =
+              "🚀 Proposal received! Check your inbox for a confirmation — I'll be in touch soon.";
           contactForm.reset();
           if (submitBtn) submitBtn.disabled = false;
         })
@@ -188,7 +190,8 @@ if (contactForm) {
           console.error("EmailJS error:", err);
           const errMsg = (err && (err.text || err.message)) || "Unknown error";
           if (statusEl)
-            statusEl.textContent = `Error: ${errMsg}. Redirecting to email...`;
+            statusEl.textContent =
+              "Connecting to your mail app to ensure your message reaches me... ";
 
           // Fallback to mailto
           const name = document.getElementById("name").value || "";
