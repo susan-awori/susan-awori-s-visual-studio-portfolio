@@ -23,10 +23,17 @@
       </div>
       <nav id="mobileNav" class="nav-menu">
         <a href="index.html#home">Home</a>
-        <a href="#completed">Completed</a>
-        <a href="#in-progress">In Progress</a>
-        <a href="#to-do">To-Do</a>
-        <a href="designer.html">Graphics</a>
+        <a href="index.html#about">Info</a>
+        <a href="projects.html" class="active-nav">Projects</a>
+        <a href="designer.html">Designer</a>
+        <a href="https://github.com/susan-awori" target="_blank">View Code</a>
+        <a
+          href="assets/Susan_Resume_2026.pdf"
+          download="Susan_Resume_2026.pdf"
+          class="resume-btn"
+        >
+          Download CV
+        </a>
       </nav>
       <button id="themeToggle" aria-label="Toggle dark mode">☀️</button>
       <button id="hamburger" class="hamburger" aria-label="Toggle menu">
@@ -36,7 +43,34 @@
       </button>
     </header>
 
-    <section class="completed-section" id="completed">
+    <main class="designer-page">
+      <!-- Projects Hero Section -->
+      <section class="designer-hero">
+        <div class="designer-hero-content">
+          <div class="designer-badge">Development & UI/UX Projects</div>
+          <h1>Featured Engineering & Design Work</h1>
+          <p>
+            Explore interactive web applications, strategy games, QR payment solutions, 
+            and seller onboarding landing pages built with clean code and modern responsive design.
+          </p>
+          <div class="designer-hero-stats">
+            <div class="stat-pill">
+              <span class="stat-icon">💻</span>
+              <span>Web Applications & Games</span>
+            </div>
+            <div class="stat-pill">
+              <span class="stat-icon">⚡</span>
+              <span>Responsive UI/UX</span>
+            </div>
+            <div class="stat-pill">
+              <span class="stat-icon">🚀</span>
+              <span>Open Source & Case Studies</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="completed-section" id="completed">
       <h2 class="section-title">COMPLETED</h2>
       <div class="projects-grid">
         <article class="project-card">
@@ -218,6 +252,17 @@
         </article>
       </div>
     </section>
+
+    </main>
+
+    <!-- Lightbox Overlay for Image Previews -->
+    <div id="lightbox" class="lightbox" aria-hidden="true">
+      <div class="lightbox-content">
+        <button id="lightbox-close" aria-label="Close image">&times;</button>
+        <img id="lightbox-img" src="" alt="Project Full View" />
+        <div id="lightbox-caption" class="lightbox-caption"></div>
+      </div>
+    </div>
 
     <footer class="site-footer">
       <div class="footer-container">
