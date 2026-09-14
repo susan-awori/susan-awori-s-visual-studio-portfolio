@@ -217,18 +217,21 @@ if (yearSpan) yearSpan.textContent = new Date().getFullYear();
 
 console.log("Projects board loaded");
 
-// Lightbox for project-gallery thumbnails
+// Lightbox for project-gallery thumbnails & designer showcase images
 (function () {
-  const galleryImgs = document.querySelectorAll(".project-gallery img");
   const lightbox = document.getElementById("lightbox");
   const lightboxImg = document.getElementById("lightbox-img");
   const lightboxClose = document.getElementById("lightbox-close");
+  const lightboxCaption = document.getElementById("lightbox-caption");
 
   if (!lightbox || !lightboxImg) return;
 
-  function openLightbox(src, alt) {
+  function openLightbox(src, alt, captionText) {
     lightboxImg.src = src;
     lightboxImg.alt = alt || "";
+    if (lightboxCaption) {
+      lightboxCaption.textContent = captionText || alt || "";
+    }
     lightbox.classList.add("show");
     lightbox.setAttribute("aria-hidden", "false");
   }
@@ -237,17 +240,58 @@ console.log("Projects board loaded");
     lightbox.classList.remove("show");
     lightbox.setAttribute("aria-hidden", "true");
     lightboxImg.src = "";
+    if (lightboxCaption) lightboxCaption.textContent = "";
   }
 
-  galleryImgs.forEach((img) => {
-    img.addEventListener("click", () => openLightbox(img.src, img.alt));
+  // Attach lightbox event listeners to gallery images
+  const galleryImgs = document.querySelectorAll(".project-gallery img, .design-img, .design-image-wrapper");
+  galleryImgs.forEach((element) => {
+    element.addEventListener("click", (e) => {
+      let img = element;
+      if (element.classList.contains("design-image-wrapper")) {
+        img = element.querySelector("img");
+      }
+      if (!img || !img.src) return;
+
+      const card = img.closest(".design-card");
+      const title = card ? card.querySelector("h3") : null;
+      const captionText = title ? title.textContent : img.alt;
+
+      openLightbox(img.src, img.alt, captionText);
+    });
   });
 
   lightboxClose && lightboxClose.addEventListener("click", closeLightbox);
   lightbox.addEventListener("click", (e) => {
-    if (e.target === lightbox || e.target === lightboxImg) closeLightbox();
+    if (e.target === lightbox || e.target === lightboxClose) closeLightbox();
   });
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") closeLightbox();
   });
 })();
+
+// Designer page tab filtering logic
+document.addEventListener("DOMContentLoaded", () => {
+  const designerTabs = document.querySelectorAll(".designer-tab");
+  const designCards = document.querySelectorAll(".design-card");
+
+  if (designerTabs.length > 0 && designCards.length > 0) {
+    designerTabs.forEach((tab) => {
+      tab.addEventListener("click", () => {
+        designerTabs.forEach((t) => t.classList.remove("active"));
+        tab.classList.add("active");
+
+        const filterValue = tab.getAttribute("data-filter");
+
+        designCards.forEach((card) => {
+          const category = card.getAttribute("data-category");
+          if (filterValue === "all" || category === filterValue) {
+            card.style.display = "flex";
+          } else {
+            card.style.display = "none";
+          }
+        });
+      });
+    });
+  }
+});
