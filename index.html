@@ -1,406 +1,388 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Susan Awori Portfolio</title>
+    <title>Susan Awori | Web Developer, UI/UX Designer & Digital Lead</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" type="image/x-icon" href="image/logo.png" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
   </head>
 
   <body>
+    <!-- Header Navigation -->
     <header>
       <div class="logo">
         <img
           src="image/logo.jpg"
-          alt="susan awori picture"
+          alt="Susan Awori picture"
           class="header-image"
         />
-        Susan Awori 
+        <span>Susan Awori</span>
       </div>
 
       <nav id="mobileNav" class="nav-menu">
         <a href="#home" class="active-nav">Home</a>
-        <a href="#about">Info</a>
+        <a href="#services">Services</a>
         <a href="projects.html">Projects</a>
         <a href="designer.html">Designer</a>
-        <a href="https://github.com/susan-awori" target="_blank">View Code</a>
-
+        <a href="#about">About Me</a>
+        <a href="#contact">Contact</a>
         <a
           href="assets/Susan_Resume_2026.pdf"
           download="Susan_Resume_2026.pdf"
-          class="resume-btn"
+          class="resume-btn mobile-only"
         >
           Download CV
         </a>
       </nav>
-      <button id="themeToggle" aria-label="Toggle dark mode">☀️</button>
-      <button id="hamburger" class="hamburger" aria-label="Toggle menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
+
+      <div class="header-actions">
+        <button id="themeToggle" aria-label="Toggle dark mode">🌙</button>
+        <a href="#contact" class="btn btn-header">Let's Talk</a>
+        <button id="hamburger" class="hamburger" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
     </header>
 
     <main>
-      <section
-        id="home"
-        class="carousel-container"
-        aria-label="Hero Image Carousel"
-      >
-        <div class="carousel-track">
-          <div class="slide">
-            <div class="slide-text">
-              <div class="slide-text-inner">
-                <h2>Welcome to My Portfolio</h2>
-                <p>
-                  Crafting seamless digital experiences through code and
-                  creativity.
-                </p>
-                <a
-                  href="https://github.com/susan-awori"
-                  target="_blank"
-                  style="
-                    display: inline-block;
-                    background-color: var(--secondary-color);
-                    color: var(--text-color-dark);
-                    padding: 0.75rem 1.5rem;
-                    border: none;
-                    border-radius: 0.5rem;
-                    font-weight: 600;
-                    text-decoration: none;
-                    cursor: pointer;
-                    transition: background-color 0.3s ease;
-                  "
-                  >View Work</a
-                >
-              </div>
-            </div>
-            <div class="slide-image">
-              <img src="image/kari-shea-1SAnrIxw5OY-unsplash.jpg" />
-            </div>
+      <!-- Hero Section -->
+      <section id="home" class="hero-jojo">
+        <div class="hero-container">
+          <div class="hero-top-badge">
+            <span class="badge-icon">✨</span>
+            <span>Digital Lead @ DealConnect & Web Developer</span>
           </div>
 
-          <div class="slide">
-            <div class="slide-text">
-              <div class="slide-text-inner">
-                <h2>I Turn Ideas Into Digital Solutions</h2>
-                <p>
-                  I’m a self-taught Web Developer, Designer, and Content
-                  Strategist. I create websites and content that help ideas
-                  grow.From concept to code — thoughtful solutions that scale.
-                </p>
-                <a
-                  href="#projects"
-                  style="
-                    display: inline-block;
-                    background-color: var(--secondary-color);
-                    color: var(--text-color-dark);
-                    padding: 0.75rem 1.5rem;
-                    border: none;
-                    border-radius: 0.5rem;
-                    font-weight: 600;
-                    text-decoration: none;
-                    cursor: pointer;
-                    transition: background-color 0.3s ease;
-                  "
-                  >See Projects</a
-                >
+          <h1 class="hero-title">
+            I'm <span class="highlight-amber">Susan Awori</span>
+          </h1>
+          <p class="hero-subtitle">
+            Web Developer, UI/UX Designer & Content Strategist based in Nairobi, Kenya. 
+            Crafting seamless digital experiences through code, creativity, and strategic design.
+          </p>
+
+          <!-- Main Hero Card Showcase -->
+          <div class="hero-card-showcase">
+            <!-- Social Bar (Left) -->
+            <div class="hero-social-strip">
+              <span class="strip-label">Follow Me</span>
+              <a href="https://www.linkedin.com/in/susan-awori" target="_blank" title="LinkedIn">LinkedIn</a>
+              <a href="https://github.com/susan-awori" target="_blank" title="GitHub">GitHub</a>
+              <a href="https://medium.com/@susan-awori/" target="_blank" title="Medium">Medium</a>
+              <a href="https://www.behance.net/susanawori" target="_blank" title="Behance">Behance</a>
+              <a href="https://x.com/susan_awori" target="_blank" title="Twitter/X">Twitter</a>
+            </div>
+
+            <!-- Central Portrait Image Container -->
+            <div class="hero-image-box">
+              <img
+                src="image/christin-hume-mfB1B1s4sMc-unsplash.jpg"
+                alt="Susan Awori workspace and design desk"
+                class="hero-portrait"
+              />
+              <div class="hero-image-overlay"></div>
+              
+              <!-- Floating Skill Badges -->
+              <div class="floating-badge badge-1">
+                <span class="f-icon">💻</span> Web Developer
+              </div>
+              <div class="floating-badge badge-2">
+                <span class="f-icon">🎨</span> UI/UX Design
+              </div>
+              <div class="floating-badge badge-3">
+                <span class="f-icon">🚀</span> Content Strategy
               </div>
             </div>
-            <div class="slide-image">
-              <img src="image/andras-vas-Bd7gNnWJBkU-unsplash.jpg" />
-            </div>
-          </div>
 
-          <div class="slide">
-            <div class="slide-text">
-              <div class="slide-text-inner">
-                <h2>Let’s Build Something Together</h2>
-                <p>
-                  Follow my journey, check out my projects, and get in touch.
-                  Exciting things are coming
-                </p>
-                <a
-                  href="https://www.linkedin.com/in/susan-awori"
-                  target="_blank"
-                  style="
-                    display: inline-block;
-                    background-color: var(--secondary-color);
-                    color: var(--text-color-dark);
-                    padding: 0.75rem 1.5rem;
-                    border: none;
-                    border-radius: 0.5rem;
-                    font-weight: 600;
-                    text-decoration: none;
-                    cursor: pointer;
-                    transition: background-color 0.3s ease;
-                  "
-                >
-                  Connect Now
+            <!-- Action Buttons & Reviews (Right) -->
+            <div class="hero-cta-box">
+              <div class="quote-box">
+                <span class="quote-mark">“</span>
+                <p>Turning complex ideas into elegant, functional code & high-converting brand designs.</p>
+              </div>
+
+              <div class="hero-btn-group">
+                <a href="projects.html" class="btn btn-amber">
+                  View Portfolio <span class="arrow">→</span>
+                </a>
+                <a href="assets/Susan_Resume_2026.pdf" download="Susan_Resume_2026.pdf" class="btn btn-dark-outline">
+                  Download CV
                 </a>
               </div>
             </div>
-            <div class="slide-image">
-              <img src="image/christin-hume-mfB1B1s4sMc-unsplash.jpg" />
+          </div>
+        </div>
+      </section>
+
+      <!-- Skill Marquee Ticker Bar -->
+      <div class="ticker-banner">
+        <div class="ticker-track">
+          <span>WEB DEVELOPMENT</span> <span class="star">✦</span>
+          <span>UI/UX DESIGN</span> <span class="star">✦</span>
+          <span>BRAND STRATEGY</span> <span class="star">✦</span>
+          <span>DIGITAL LEAD @ DEALCONNECT</span> <span class="star">✦</span>
+          <span>CONTENT STRATEGY</span> <span class="star">✦</span>
+          <span>JAVASCRIPT ES6+</span> <span class="star">✦</span>
+          <span>HTML5 & CSS3</span> <span class="star">✦</span>
+          <span>WEB DEVELOPMENT</span> <span class="star">✦</span>
+          <span>UI/UX DESIGN</span> <span class="star">✦</span>
+          <span>BRAND STRATEGY</span> <span class="star">✦</span>
+          <span>DIGITAL LEAD @ DEALCONNECT</span> <span class="star">✦</span>
+          <span>CONTENT STRATEGY</span> <span class="star">✦</span>
+          <span>JAVASCRIPT ES6+</span> <span class="star">✦</span>
+          <span>HTML5 & CSS3</span> <span class="star">✦</span>
+        </div>
+      </div>
+
+      <!-- Services Section ("How I Bring Ideas to Life") -->
+      <section id="services" class="services-section">
+        <div class="section-container">
+          <div class="section-header-jojo">
+            <span class="sub-badge">● My Services</span>
+            <h2>How I Bring <span class="highlight-amber">Ideas to Life</span></h2>
+          </div>
+
+          <div class="services-accordion">
+            <!-- Service Item 1 -->
+            <div class="service-card active" data-service="1">
+              <div class="service-header">
+                <span class="service-num">01.</span>
+                <h3>UI/UX Design</h3>
+                <span class="toggle-icon">✕</span>
+              </div>
+              <div class="service-content">
+                <div class="service-tags">
+                  <span>Mobile App Design</span>
+                  <span>Web Interfaces</span>
+                  <span>Wireframing & Prototyping</span>
+                  <span>Design Systems</span>
+                </div>
+                <p>
+                  Designing modern, user-friendly interfaces focused on seamless user experiences, 
+                  accessibility, visual aesthetics, and business growth.
+                </p>
+              </div>
+            </div>
+
+            <!-- Service Item 2 -->
+            <div class="service-card" data-service="2">
+              <div class="service-header">
+                <span class="service-num">02.</span>
+                <h3>Website & Application Development</h3>
+                <span class="toggle-icon">➔</span>
+              </div>
+              <div class="service-content">
+                <div class="service-tags">
+                  <span>Responsive Web Design</span>
+                  <span>HTML5 / CSS3 / JS ES6</span>
+                  <span>Frontend Engineering</span>
+                  <span>Game & Payment UI</span>
+                </div>
+                <p>
+                  Building fast, responsive, and maintainable web applications with clean code, 
+                  interactive functionality, and modern frontend practices.
+                </p>
+              </div>
+            </div>
+
+            <!-- Service Item 3 -->
+            <div class="service-card" data-service="3">
+              <div class="service-header">
+                <span class="service-num">03.</span>
+                <h3>Brand Strategy & Social Media Design</h3>
+                <span class="toggle-icon">➔</span>
+              </div>
+              <div class="service-content">
+                <div class="service-tags">
+                  <span>Digital Lead @ DealConnect</span>
+                  <span>Social Media Campaigns</span>
+                  <span>Brand Identity</span>
+                  <span>Marketing Collateral</span>
+                </div>
+                <p>
+                  Leading digital visual strategy and creating high-converting social media marketing graphics, 
+                  flyers, and promotional collateral for brands.
+                </p>
+              </div>
+            </div>
+
+            <!-- Service Item 4 -->
+            <div class="service-card" data-service="4">
+              <div class="service-header">
+                <span class="service-num">04.</span>
+                <h3>Content Strategy & Technical Writing</h3>
+                <span class="toggle-icon">➔</span>
+              </div>
+              <div class="service-content">
+                <div class="service-tags">
+                  <span>Medium Publisher</span>
+                  <span>Brand Messaging</span>
+                  <span>Developer Documentation</span>
+                  <span>Technical Storytelling</span>
+                </div>
+                <p>
+                  Crafting compelling brand narratives, technical articles, and content strategies 
+                  that engage audiences and clearly communicate technical solutions.
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <br />
-
-      <section id="about" class="hero" aria-label="Hero Image Carousel">
-        <div class="hero-content">
-          <h1>
-            Building the future of
-            <span class="highlight">digital experiences.</span>
-          </h1>
-
-          <p>
-            I'm Susan, a developer and founder of S-Visual Studio. I turn
-            complex ideas into elegant, functional code.<br />
-            I’m a passionate self-taught developer and content strategist
-            focused on building clean, functional digital experiences. I enjoy
-            turning ideas into real solutions and I’m continuously learning and
-            growing in modern technologies.
-          </p>
-
-          <div class="hero-btns">
-            <a
-              href="https://medium.com/@susan-awori/"
-              target="_blank"
-              style="
-                display: inline-block;
-                background-color: var(--secondary-color);
-                color: var(--text-color-dark);
-                padding: 0.75rem 1.5rem;
-                border: none;
-                border-radius: 0.5rem;
-                font-weight: 600;
-                text-decoration: none;
-                cursor: pointer;
-                transition: background-color 0.3s ease;
-              "
-              >Read My Story</a
-            >
-          </div>
-        </div>
-      </section>
-
-      <section id="work" class="work-section">
-        <div style="padding: 40px 10%">
-          <h1>Projects</h1>
-          <p>
-            Overview of my professional work. Scroll down to see project
-            listings.
-          </p>
-        </div>
-      </section>
-
-      <div class="content-wrapper">
-        <aside class="sidebar">
-          <div class="sidebar-widget">
-            <h3>Skills</h3>
-            <ul>
-              <li>HTML, CSS, JavaScript</li>
-              <li>UI/UX Design</li>
-              <li>Git & GitHub</li>
-              <li>Content Strategy</li>
-              <li>Branding & Social Media</li>
-            </ul>
+      <!-- About Me Section ("Who is Susan Awori?") -->
+      <section id="about" class="about-section">
+        <div class="section-container about-grid">
+          <div class="about-image-col">
+            <div class="about-img-frame">
+              <img
+                src="image/kari-shea-1SAnrIxw5OY-unsplash.jpg"
+                alt="Susan Awori Developer & Designer"
+                class="about-img"
+              />
+              <div class="about-experience-badge">
+                <span class="exp-num">S-Visual</span>
+                <span class="exp-text">Studio Studio Founder</span>
+              </div>
+            </div>
           </div>
 
-          <div class="sidebar-widget">
-            <h3>Stay Connected</h3>
-            <p style="font-size: 0.9rem; margin-bottom: 1rem">
-              Don't miss a single post! Follow me on LinkedIn to stay updated
-              with my latest projects, insights, and professional journey.<br />
-              More exciting content coming soon.
+          <div class="about-text-col">
+            <span class="sub-badge">● About Me</span>
+            <h2>Who is <span class="highlight-amber">Susan Awori?</span></h2>
+            <p>
+              I'm Susan Awori — a self-taught Web Developer, Designer, and Content Strategist, 
+              as well as the Digital Lead at <strong>DealConnect</strong> and founder of <strong>S-Visual Studio</strong>.
+            </p>
+            <p>
+              I specialize in bridging the gap between complex software ideas and beautiful, user-centered digital interfaces. 
+              Whether crafting custom web applications, designing social media campaigns, or publishing technical articles, 
+              I bring a disciplined, creative approach to every project.
             </p>
 
-            <a
-              href="https://www.linkedin.com/in/susan-awori"
-              target="_blank"
-              style="
-                display: inline-block;
-                background-color: var(--secondary-color);
-                color: var(--text-color-dark);
-                padding: 0.75rem 1.5rem;
-                border: none;
-                border-radius: 0.5rem;
-                font-weight: 600;
-                text-decoration: none;
-                cursor: pointer;
-                transition: background-color 0.3s ease;
-              "
-            >
-              Connect Now
-            </a>
+            <div class="about-stats-grid">
+              <div class="stat-box">
+                <h4>Frontend & Web</h4>
+                <p>HTML5, CSS3, JavaScript ES6+, Responsive Layouts</p>
+              </div>
+              <div class="stat-box">
+                <h4>UI/UX & Branding</h4>
+                <p>Wireframing, Prototyping, Social Media Visuals</p>
+              </div>
+            </div>
+
+            <div class="about-actions">
+              <a href="designer.html" class="btn btn-amber">Explore Graphics Page →</a>
+              <a href="https://medium.com/@susan-awori/" target="_blank" class="btn btn-dark-outline">Read My Story</a>
+            </div>
           </div>
+        </div>
+      </section>
 
-          <div id="Contact" class="sidebar-widget">
-            <h3>Contact Me</h3>
-            <form id="contactForm">
-              <input
-                type="text"
-                id="name"
-                name="from_name"
-                placeholder="Your Name"
-                required
-              />
-              <input
-                type="email"
-                id="email"
-                name="reply_to"
-                placeholder="Your Email"
-                required
-              />
-              <textarea
-                id="message"
-                name="message"
-                placeholder="Your Message"
-                required
-              ></textarea>
-              <div
-                id="contactStatus"
-                role="status"
-                class="form-note"
-                aria-live="polite"
-              ></div>
-              <button
-                type="submit"
-                class="btn"
-                title="Currently undergoing maintenance - please use email link below"
-              >
-                Send Message
-              </button>
-            </form>
-          </div>
-        </aside>
+      <!-- Contact Section ("Let's Build Something Together") -->
+      <section id="contact" class="contact-section">
+        <div class="section-container">
+          <div class="contact-card-box">
+            <div class="contact-info-side">
+              <span class="sub-badge">● Contact Me</span>
+              <h2>Let's Build Something <span class="highlight-amber">Together</span></h2>
+              <p>
+                Have a project in mind, need a custom website, or looking for high-converting visual designs? 
+                Feel free to reach out directly.
+              </p>
 
-        <section id="projects" class="project-grid">
-          <div class="project-tabs">
-            <button class="tab active" data-tab="completed">Completed</button>
-            <button class="tab" data-tab="progress">In Progress</button>
-            <button class="tab" data-tab="todo">To Do</button>
-          </div>
+              <div class="contact-details-list">
+                <div class="c-item">
+                  <span class="c-icon">📧</span>
+                  <div>
+                    <label>Email</label>
+                    <a href="mailto:susanawori15@gmail.com">susanawori15@gmail.com</a>
+                  </div>
+                </div>
+                <div class="c-item">
+                  <span class="c-icon">📞</span>
+                  <div>
+                    <label>Phone</label>
+                    <span>+254 743 889 672</span>
+                  </div>
+                </div>
+                <div class="c-item">
+                  <span class="c-icon">📍</span>
+                  <div>
+                    <label>Location</label>
+                    <span>Nairobi, Kenya</span>
+                  </div>
+                </div>
+              </div>
+            </div>
 
-          <div class="projects-list" id="completed">
-            <div class="project-card">
-              <div class="project-info">
-                <h3>Cow, Grass & Lion – Strategy Game</h3>
-                <p>
-                  Core Concept: Players compete using a cyclic food-chain logic:
-                  Lion beats Cow, Cow beats Grass, and Grass beats Lion —
-                  simulating the balance of nature in a fun, interactive way.
-                </p>
-
-                <div class="tags">
-                  <span>HTML</span>
-                  <span>CSS</span>
-                  <span>JS</span>
+            <div class="contact-form-side">
+              <form id="contactForm">
+                <div class="form-group">
+                  <input
+                    type="text"
+                    id="name"
+                    name="from_name"
+                    placeholder="Your Name"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <input
+                    type="email"
+                    id="email"
+                    name="reply_to"
+                    placeholder="Your Email Address"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <textarea
+                    id="message"
+                    name="message"
+                    placeholder="Tell me about your project or idea..."
+                    required
+                  ></textarea>
                 </div>
 
-                <a href="projects.html#project1" class="project-link"
-                  >View Project →</a
-                >
-              </div>
-            </div>
+                <div
+                  id="contactStatus"
+                  role="status"
+                  class="form-note"
+                  aria-live="polite"
+                ></div>
 
-            <div class="project-card">
-              <div class="project-info">
-                <h3>ScanPay – Dynamic QR Code Payment Solution</h3>
-                <p>
-                  The project focuses on delivering a fast, reliable, and
-                  mobile-first payment experience optimized for real-world
-                  usage.
-                </p>
-
-                <div class="tags">
-                  <span>HTML</span>
-                  <span>CSS</span>
-                  <span>JS</span>
-                </div>
-
-                <a href="projects.html#project2" class="project-link"
-                  >View Project →</a
-                >
-              </div>
-            </div>
-
-            <div class="project-card">
-              <div class="project-info">
-                <h3>UzaLeo – Modern Seller Onboarding Landing Page</h3>
-                <p>
-                  The project focuses on delivering a professional, engaging,
-                  and fast user experience that guides potential sellers through
-                  the platform’s value and process, ending with a strong
-                  call-to-action.
-                </p>
-
-                <div class="tags">
-                  <span>HTML</span>
-                  <span>CSS</span>
-                  <span>JS</span>
-                </div>
-
-                <a href="projects.html#project3" class="project-link"
-                  >View Project →</a
-                >
-              </div>
+                <button type="submit" class="btn btn-amber btn-full">
+                  Send Message 🚀
+                </button>
+              </form>
             </div>
           </div>
-
-          <div class="projects-list hidden" id="progress">
-            <div class="project-card">
-              <div class="project-info">
-                <h3>E-Commerce App</h3>
-                <p>
-                  React store with cart functionality and product filtering.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="projects-list hidden" id="todo">
-            <div class="project-card">
-              <div class="project-info">
-                <h3>AI UX Case Study</h3>
-                <p>Upcoming research-driven UX project.</p>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
+        </div>
+      </section>
     </main>
 
-    <!-- Lightbox Overlay for Image Previews -->
-    <div id="lightbox" class="lightbox" aria-hidden="true">
-      <div class="lightbox-content">
-        <button id="lightbox-close" aria-label="Close image">&times;</button>
-        <img id="lightbox-img" src="" alt="Full View" />
-        <div id="lightbox-caption" class="lightbox-caption"></div>
-      </div>
-    </div>
-
+    <!-- Footer -->
     <footer class="site-footer">
       <div class="footer-container">
         <div class="footer-column">
           <h3>Follow Me</h3>
           <div class="social-links">
             <ul>
-              <li>
-                <a href="https://www.linkedin.com/in/susan-awori">LinkedIn</a>
-              </li>
-              <li><a href="https://medium.com/@susan-awori/">Medium</a></li>
-              <li><a href="https://github.com/susan-awori">GitHub</a></li>
-              <li><a href="https://www.behance.net/susanawori">Behance</a></li>
-              <li><a href="https://dribbble.com/susan-awori">Dribbble</a></li>
-              <li><a href="https://x.com/susan_awori">Twitter</a></li>
-              <li>
-                <a href="https://www.instagram.com/suzisuu_/">Instagram</a>
-              </li>
+              <li><a href="https://www.linkedin.com/in/susan-awori" target="_blank">LinkedIn</a></li>
+              <li><a href="https://medium.com/@susan-awori/" target="_blank">Medium</a></li>
+              <li><a href="https://github.com/susan-awori" target="_blank">GitHub</a></li>
+              <li><a href="https://www.behance.net/susanawori" target="_blank">Behance</a></li>
+              <li><a href="https://dribbble.com/susan-awori" target="_blank">Dribbble</a></li>
+              <li><a href="https://x.com/susan_awori" target="_blank">Twitter</a></li>
+              <li><a href="https://www.instagram.com/suzisuu_/" target="_blank">Instagram</a></li>
             </ul>
           </div>
         </div>
@@ -409,9 +391,11 @@
           <h3>Site Map</h3>
           <ul>
             <li><a href="#home" class="site-map-links">Home</a></li>
-            <li><a href="#about" class="site-map-links">About Me</a></li>
-            <li><a href="#work" class="site-map-links">Projects</a></li>
+            <li><a href="#services" class="site-map-links">Services</a></li>
+            <li><a href="projects.html" class="site-map-links">Projects</a></li>
             <li><a href="designer.html" class="site-map-links">Designer</a></li>
+            <li><a href="#about" class="site-map-links">About Me</a></li>
+            <li><a href="#contact" class="site-map-links">Contact</a></li>
           </ul>
         </div>
 
@@ -427,8 +411,7 @@
 
       <div class="footer-bottom">
         <p>
-          &copy; <span id="year"></span> Susan Awori Portfolio. All rights
-          reserved.
+          &copy; <span id="year"></span> Susan Awori Portfolio. All rights reserved.
         </p>
       </div>
     </footer>
