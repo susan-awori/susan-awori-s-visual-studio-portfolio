@@ -43,14 +43,18 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Dark/Light Theme Toggle
+  // Dark/Light Theme Toggle (Defaults to Dark Theme across all pages)
   const toggle = document.getElementById("themeToggle");
+  const savedTheme = localStorage.getItem("portfolio-theme") || "dark";
+  document.documentElement.setAttribute("data-theme", savedTheme);
   if (toggle) {
+    toggle.textContent = savedTheme === "dark" ? "🌙" : "☀️";
     toggle.addEventListener("click", () => {
       const currentTheme = document.documentElement.getAttribute("data-theme");
       const nextTheme = currentTheme === "light" ? "dark" : "light";
 
       document.documentElement.setAttribute("data-theme", nextTheme);
+      localStorage.setItem("portfolio-theme", nextTheme);
       toggle.textContent = nextTheme === "dark" ? "🌙" : "☀️";
     });
   }

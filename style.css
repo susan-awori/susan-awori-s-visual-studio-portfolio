@@ -45,6 +45,7 @@
 
 html {
   scroll-behavior: smooth;
+  font-size: 90%;
 }
 
 body {
@@ -265,7 +266,7 @@ nav.nav-menu a.active-nav {
 }
 
 .hero-title {
-  font-size: 3.8rem;
+  font-size: 3.2rem;
   font-weight: 900;
   letter-spacing: -0.03em;
   margin: 0 0 16px 0;
@@ -564,7 +565,7 @@ nav.nav-menu a.active-nav {
 }
 
 .section-header-jojo h2 {
-  font-size: 2.8rem;
+  font-size: 2.4rem;
   font-weight: 900;
   margin: 0;
   color: var(--text);
