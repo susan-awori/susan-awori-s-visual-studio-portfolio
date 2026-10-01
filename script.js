@@ -43,9 +43,9 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Dark/Light Theme Toggle (Defaults to Dark Theme across all pages)
+  // Dark/Light Theme Toggle (Defaults to Light Theme across all pages)
   const toggle = document.getElementById("themeToggle");
-  const savedTheme = localStorage.getItem("portfolio-theme") || "dark";
+  const savedTheme = localStorage.getItem("portfolio-theme") || "light";
   document.documentElement.setAttribute("data-theme", savedTheme);
   if (toggle) {
     toggle.textContent = savedTheme === "dark" ? "🌙" : "☀️";
