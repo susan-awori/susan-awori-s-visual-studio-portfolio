@@ -247,6 +247,12 @@ nav.nav-menu a.active-nav {
    HOME PAGE HERO SECTION (JENNY/JOJO STYLE)
    ========================================================================== */
 .hero-jojo {
+  min-height: calc(100vh - 75px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
   padding: 60px 8% 40px 8%;
   background: radial-gradient(circle at 50% 20%, rgba(255, 159, 28, 0.08) 0%, transparent 70%);
   text-align: center;
@@ -254,6 +260,7 @@ nav.nav-menu a.active-nav {
 
 .hero-container {
   max-width: 1250px;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -1185,6 +1192,12 @@ nav.nav-menu a.active-nav {
 }
 
 .designer-hero {
+  min-height: calc(100vh - 75px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
   background: radial-gradient(circle at 50% 30%, rgba(255, 159, 28, 0.08) 0%, transparent 70%);
   padding: 60px 8%;
   text-align: center;
@@ -1194,6 +1207,7 @@ nav.nav-menu a.active-nav {
 
 .designer-hero-content {
   max-width: 850px;
+  width: 100%;
   margin: 0 auto;
 }
 
