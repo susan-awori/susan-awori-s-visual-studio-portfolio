@@ -28,27 +28,27 @@
 }
 
 [data-theme="light"] {
-  --bg: #f8f9fc;
-  --page-bg: #ffffff;
-  --card: #ffffff;
-  --card-hover: #f1f3f9;
+  --bg: #b39e7e;
+  --page-bg: #beaa8c;
+  --card: #ebdcc7;
+  --card-hover: #f2e5d3;
   --text: #1a1d24;
-  --text-muted: #5a6072;
-  --text-color-light: #5a6072;
+  --text-muted: #4a3f35;
+  --text-color-light: #4a3f35;
   --amber: #e08b12;
   --amber-dark: #c77608;
   --amber-glow: rgba(224, 139, 18, 0.2);
-  --border-color: rgba(0, 0, 0, 0.08);
-  --header-bg: rgba(255, 255, 255, 0.92);
+  --border-color: rgba(0, 0, 0, 0.1);
+  --header-bg: rgba(190, 170, 140, 0.94);
   --primary-brown: #e08b12;
   --primary-color: #e08b12;
   --secondary-color: #e08b12;
-  --footer-bg: #f3f5f9;
+  --footer-bg: #b39e7e;
   --footer-text: #1a1d24;
-  --footer-border: rgba(0, 0, 0, 0.08);
-  --footer-pill-bg: #ffffff;
-  --footer-pill-border: rgba(0, 0, 0, 0.09);
-  --footer-pill-hover: rgba(224, 139, 18, 0.12);
+  --footer-border: rgba(0, 0, 0, 0.1);
+  --footer-pill-bg: #ebdcc7;
+  --footer-pill-border: rgba(0, 0, 0, 0.1);
+  --footer-pill-hover: rgba(224, 139, 18, 0.15);
 }
 
 html {
@@ -1096,7 +1096,7 @@ nav.nav-menu a.active-nav {
 }
 
 .tags span {
-  background: rgba(255, 159, 28, 0.1);
+  background: var(--amber-glow);
   color: var(--amber);
   padding: 3px 10px;
   border-radius: 10px;
@@ -1888,3 +1888,5 @@ nav.nav-menu a.active-nav {
     margin-top: 6px;
   }
 }
+
+
