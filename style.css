@@ -1774,3 +1774,117 @@ nav.nav-menu a.active-nav {
     gap: 8px;
   }
 }
+
+
+/* ==========================================================================
+   PORTFOLIO REPOSITIONING & ENHANCEMENTS
+   ========================================================================== */
+
+.hero-tagline {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--amber);
+  margin: 0 0 16px 0;
+  letter-spacing: -0.01em;
+  line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+  .hero-tagline {
+    font-size: 1.15rem;
+  }
+}
+
+/* Project Filter Tabs */
+.project-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.project-tab {
+  background: var(--card);
+  border: 1px solid var(--border-color);
+  color: var(--text-muted);
+  padding: 10px 22px;
+  border-radius: 30px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  font-family: inherit;
+}
+
+.project-tab:hover {
+  border-color: var(--amber);
+  color: var(--amber);
+}
+
+.project-tab.active {
+  background: var(--amber);
+  color: #0d0e12 !important;
+  font-weight: 700;
+  border-color: var(--amber);
+  box-shadow: 0 4px 14px var(--amber-glow);
+}
+
+/* Hidden state for filterable cards */
+.project-card.is-hidden,
+.design-card.is-hidden {
+  display: none !important;
+}
+
+/* Category indicator on project cards */
+.category-badge {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--amber);
+  margin-bottom: 6px;
+}
+
+/* Structured project information */
+.project-details {
+  margin: 10px 0 16px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  border-top: 1px solid var(--border-color);
+  padding-top: 10px;
+}
+
+.project-detail-row {
+  font-size: 0.84rem;
+  line-height: 1.5;
+  color: var(--text-muted);
+}
+
+.project-detail-label {
+  font-weight: 700;
+  color: var(--text);
+  margin-right: 4px;
+}
+
+.project-gallery,
+.design-image-wrapper {
+  cursor: pointer;
+}
+
+.mobile-only-link {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .mobile-only-link {
+    display: block !important;
+    background: var(--amber) !important;
+    color: #0d0e12 !important;
+    font-weight: 700 !important;
+    border-radius: 20px !important;
+    margin-top: 6px;
+  }
+}

@@ -3,42 +3,47 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Susan Awori | Projects</title>
+    <title>Susan Awori | Projects – Data Science, AI &amp; Machine Learning</title>
+    <meta name="description" content="Explore Susan Awori's project portfolio featuring intelligent AI assistants, machine learning models, exploratory data science analysis, and software solutions." />
+    <meta name="keywords" content="Susan Awori, Data Science Projects, Artificial Intelligence, Machine Learning, TradePass AI, Python, EDA, FinTech, Strategy Games" />
+    <meta name="author" content="Susan Awori" />
     <link rel="icon" type="image/x-icon" href="image/logo.jpg" />
     <link rel="stylesheet" href="style.css" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
   </head>
   <body>
+    <!-- Header Navigation -->
     <header>
       <div class="logo">
         <img
           src="image/logo.jpg"
-          alt="susan awori picture"
+          alt="Susan Awori picture"
           class="header-image"
         />
-        
+        <span></span>
       </div>
       <nav id="mobileNav" class="nav-menu">
         <a href="index.html#home">Home</a>
-        <a href="index.html#services">Services</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#expertise">Expertise</a>
         <a href="projects.html" class="active-nav">Projects</a>
-        <a href="designer.html">Designer</a>
-        <a href="index.html#about">About Me</a>
+        <a href="designer.html">Design Showcase</a>
         <a
           href="assets/Susan_Resume_2026.pdf"
           download="Susan_Resume_2026.pdf"
-          class="resume-btn mobile-only"
+          class="resume-btn"
         >
           Download CV
         </a>
+        <a href="index.html#contact" class="mobile-only-link">Let's Connect</a>
       </nav>
 
       <div class="header-actions">
         <button id="themeToggle" aria-label="Toggle dark mode">☀️</button>
-        <a href="index.html#contact" class="btn btn-header">Let's Talk</a>
+        <a href="index.html#contact" class="btn btn-header">Let's Connect</a>
         <button id="hamburger" class="hamburger" aria-label="Toggle menu">
           <span></span>
           <span></span>
@@ -51,160 +56,354 @@
       <!-- Projects Hero Section -->
       <section class="designer-hero">
         <div class="designer-hero-content">
-          <div class="designer-badge">Development & UI/UX Projects</div>
-          <h1>Featured Engineering & Design Work</h1>
+          <div class="designer-badge">Data Science, AI &amp; Machine Learning Projects</div>
+          <h1>Featured Projects &amp; Intelligent Solutions</h1>
           <p>
-            Explore interactive web applications, strategy games, QR payment solutions, 
-            and seller onboarding landing pages built with clean code and modern responsive design.
+            Explore intelligent AI assistants, predictive models, exploratory data science analysis,
+            interactive web applications, and technical case studies built with analytical rigor and clean implementation.
           </p>
           <div class="designer-hero-stats">
             <div class="stat-pill">
+              <span class="stat-icon">🤖</span>
+              <span>AI &amp; Machine Learning</span>
+            </div>
+            <div class="stat-pill">
+              <span class="stat-icon">📊</span>
+              <span>Data Science &amp; Analytics</span>
+            </div>
+            <div class="stat-pill">
               <span class="stat-icon">💻</span>
-              <span>Web Applications & Games</span>
-            </div>
-            <div class="stat-pill">
-              <span class="stat-icon">⚡</span>
-              <span>Responsive UI/UX</span>
-            </div>
-            <div class="stat-pill">
-              <span class="stat-icon">🚀</span>
-              <span>Open Source & Case Studies</span>
+              <span>Software &amp; Technology</span>
             </div>
           </div>
         </div>
       </section>
 
+      <!-- Projects Section with Category Filters -->
       <section class="completed-section" id="completed">
-      <h2 class="section-title">COMPLETED</h2>
-      <div class="projects-grid">
+        <div class="section-container" style="max-width: 1240px; margin: 0 auto;">
 
-        <!-- Card 1: Cow, Grass & Lion -->
-        <article class="project-card">
-          <div class="project-gallery">
-            <img src="image/logic3.jpeg" alt="Cow Grass Lion Game screenshot 1" />
-            <img src="image/Logic.jpeg" alt="Cow Grass Lion Game screenshot 2" />
-            <img src="image/logic2.png" alt="Cow Grass Lion Game screenshot 3" />
-            <img src="image/logic3.png" alt="Cow Grass Lion Game screenshot 4" />
+          <!-- Category Filter Tabs -->
+          <div class="project-tabs" role="tablist" aria-label="Project category filters">
+            <button class="project-tab active" data-filter="all">All Projects (8)</button>
+            <button class="project-tab" data-filter="ai-ml">AI &amp; Machine Learning</button>
+            <button class="project-tab" data-filter="data-science">Data Science &amp; Analytics</button>
+            <button class="project-tab" data-filter="software">Software &amp; Technology</button>
+            <button class="project-tab" data-filter="design">Design &amp; Creative</button>
           </div>
-          <div class="project-body" id="project1">
-            <div class="tags">
-              <span>HTML</span><span>CSS</span><span>JS</span>
-            </div>
-            <h3>Cow, Grass &amp; Lion <span class="badge">Live</span></h3>
-            <p>
-              A JavaScript-based strategy game inspired by the ecosystem food chain — Lion beats Cow, Cow beats Grass, and Grass beats Lion. Features a custom in-game console, animated game states, and interactive UI logic built entirely with vanilla JavaScript.
-            </p>
-            <div class="project-meta">
-              <div class="links">
-                <a class="btn btn-amber" href="https://susan-awori.github.io/Cow-Grass-Lion-Game/" target="_blank">Live Demo →</a>
-                <a class="btn btn-dark-outline" href="https://github.com/susan-awori/Cow-Grass-Lion-Game.git" target="_blank">Source Code</a>
+
+          <div class="projects-grid">
+
+            <!-- Card 1: TradePass AI Assistant (AI & ML - Visual Priority) -->
+            <article class="project-card" data-category="ai-ml" id="tradepass">
+              <div class="project-gallery" title="Click to preview images">
+                <img src="image/tradepass1.png" alt="TradePass AI Cross-Border Trade Assistant interface" loading="lazy" />
+                <img src="image/tradepass2.png" alt="TradePass Architecture and Grounding sources" loading="lazy" />
               </div>
-            </div>
-          </div>
-        </article>
-
-        <!-- Card 2: ScanPay -->
-        <article class="project-card">
-          <div class="project-gallery">
-            <img src="image/scanpay.jpg" alt="ScanPay QR solution" />
-            <img src="image/qrcode.png" alt="QR Code" />
-            <img src="image/message.jpg" alt="Message confirmation" />
-            <img src="image/camera.png" alt="Functional camera" />
-          </div>
-          <div class="project-body" id="project2">
-            <div class="tags">
-              <span>UI</span><span>UX</span><span>JS</span>
-            </div>
-            <h3>ScanPay – Dynamic QR <span class="badge">Featured</span></h3>
-            <p>
-              A mobile-first QR code payment UX case study solving retail checkout friction. Each transaction generates a unique, time-bound QR code for fast, secure scanning. Optimised for low-bandwidth environments and touch-based interaction patterns.
-            </p>
-            <div class="project-meta">
-              <div class="links">
-                <a class="btn btn-amber" href="https://susan-awori.github.io/Dynamic-QR-UX-Case/" target="_blank">Live Demo →</a>
-                <a class="btn btn-dark-outline" href="https://github.com/mebjas/html5-qrcode" target="_blank">Source Code</a>
+              <div class="project-body">
+                <span class="category-badge">Artificial Intelligence &amp; Machine Learning</span>
+                <div class="tags">
+                  <span>Python</span><span>Gradio</span><span>Gemini / Groq LLMs</span><span>AfCFTA Grounding</span><span>Prompt Engineering</span>
+                </div>
+                <h3>TradePass – AI Trade Assistant <span class="badge">Hackathon '26</span></h3>
+                <div class="project-details">
+                  <div class="project-detail-row">
+                    <span class="project-detail-label">Problem Addressed:</span> African cross-border traders face complex, opaque customs rules, variable tariffs, and AfCFTA documentation requirements that create severe cross-border bottlenecks.
+                  </div>
+                  <div class="project-detail-row">
+                    <span class="project-detail-label">Project Objective:</span> Provide an intelligent conversational trade assistant that assesses product origin compliance, identifies exact customs paperwork, and outputs actionable next-steps grounded in official regulations.
+                  </div>
+                  <div class="project-detail-row">
+                    <span class="project-detail-label">My Contribution:</span> Engineered the LLM grounding architecture and system prompt constraints to prevent hallucination, parsed trade rules, and built the responsive Gradio web interface.
+                  </div>
+                  <div class="project-detail-row">
+                    <span class="project-detail-label">Outcome &amp; Functionality:</span> Functional AI assistant deployed on Render, showcased at GOMYCODE's "Come Build with AI" Hackathon (Kenya).
+                  </div>
+                </div>
+                <div class="project-meta">
+                  <div class="links">
+                    <a class="btn btn-amber" href="https://tradeguide.onrender.com/" target="_blank" rel="noopener noreferrer">Live Demo →</a>
+                    <a class="btn btn-dark-outline" href="https://github.com/susan-awori/tradeguide" target="_blank" rel="noopener noreferrer">Source Code</a>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-        </article>
+            </article>
 
-        <!-- Card 3: UzaLeo -->
-        <article class="project-card">
-          <div class="project-gallery">
-            <img src="image/uzaleo1.png" alt="UzaLeo homepage view" />
-            <img src="image/uzaleo2.png" alt="UzaLeo laptop view" />
-            <img src="image/uzaleo3.jpg" alt="UzaLeo community stories" />
-            <img src="image/uzaleo4.jpg" alt="UzaLeo how it works" />
-          </div>
-          <div class="project-body" id="project3">
-            <div class="tags">
-              <span>HTML5</span><span>CSS3</span>
-            </div>
-            <h3>UzaLeo – Seller Onboarding <span class="badge">Design</span></h3>
-            <p>
-              A high-conversion landing page built for seller onboarding on the UzaLeo marketplace. Designed with semantic HTML5 and CSS Grid to guide potential sellers through the platform's value proposition and end with a strong call-to-action.
-            </p>
-            <div class="project-meta">
-              <div class="links">
-                <a class="btn btn-amber" href="https://susan-awori.github.io/uza-leo-seller-onboarding-page/" target="_blank">Live Demo →</a>
-                <a class="btn btn-dark-outline" href="https://github.com/susan-awori/uza-leo-seller-onboarding-page" target="_blank">Source Code</a>
+            <!-- Card 2: Exploratory Data Science & Predictive Analytics (Data Science & Analytics) -->
+            <article class="project-card" data-category="data-science" id="data-science-eda">
+              <div class="project-gallery" title="Click to preview images">
+                <img src="image/andras-vas-Bd7gNnWJBkU-unsplash.jpg" alt="Data Science analytics and exploratory workflow" loading="lazy" />
+                <img src="image/christin-hume-mfB1B1s4sMc-unsplash.jpg" alt="Data modeling, charts and statistical evaluation" loading="lazy" />
               </div>
-            </div>
-          </div>
-        </article>
-
-        <!-- Card 4: TradePass AI Assistant -->
-        <article class="project-card">
-          <div class="project-gallery">
-            <img src="image/tradepass1.png" alt="TradePass AI Cross-Border Trade Assistant interface" />
-            <img src="image/tradepass2.png" alt="TradePass Architecture and Grounding sources" />
-          </div>
-          <div class="project-body" id="tradepass">
-            <div class="tags">
-              <span>Python</span><span>Gradio</span><span>Gemini / Groq LLM</span><span>AfCFTA</span>
-            </div>
-            <h3>TradePass – AI Trade Assistant <span class="badge">Hackathon '26</span></h3>
-            <p>
-              An AI assistant built for GOMYCODE's "Come Build with AI" hackathon (Kenya) helping African cross-border traders navigate customs rules, required documentation, and AfCFTA tariff qualification. Traders describe their export in plain language (e.g. Kenya ↔ Uganda avocado oil) to receive an actionable document checklist, origin assessment, and authority next-steps grounded strictly in official trade law sources.
-            </p>
-            <div class="project-meta">
-              <div class="links">
-                <a class="btn btn-amber" href="https://tradeguide.onrender.com/" target="_blank">Live Demo →</a>
-                <a class="btn btn-dark-outline" href="https://github.com/susan-awori/tradeguide" target="_blank">Source Code</a>
+              <div class="project-body">
+                <span class="category-badge">Data Science &amp; Analytics</span>
+                <div class="tags">
+                  <span>Python</span><span>Pandas</span><span>NumPy</span><span>Matplotlib</span><span>Seaborn</span><span>Scikit-Learn</span><span>Jupyter</span>
+                </div>
+                <h3>Exploratory Data Analysis &amp; Predictive Modelling <span class="badge">Case Study</span></h3>
+                <div class="project-details">
+                  <div class="project-detail-row">
+                    <span class="project-detail-label">Problem Addressed:</span> Raw operational and transactional datasets frequently contain missing attributes, anomalous distributions, and collinearity that obscure critical trends.
+                  </div>
+                  <div class="project-detail-row">
+                    <span class="project-detail-label">Project Objective:</span> Conduct end-to-end data cleaning, exploratory data analysis (EDA), statistical hypothesis validation, and train baseline predictive models.
+                  </div>
+                  <div class="project-detail-row">
+                    <span class="project-detail-label">My Contribution:</span> Developed reproducible data preparation pipelines in Python, performed outlier detection, engineered statistical features, and evaluated classification and regression models.
+                  </div>
+                  <div class="project-detail-row">
+                    <span class="project-detail-label">Outcome &amp; Functionality:</span> Documented analytical workflows with publication-grade visualizations, statistical summaries, and interpretable model performance metrics.
+                  </div>
+                </div>
+                <div class="project-meta">
+                  <div class="links">
+                    <a class="btn btn-amber" href="https://github.com/susan-awori" target="_blank" rel="noopener noreferrer">GitHub Profile →</a>
+                    <a class="btn btn-dark-outline" href="index.html#contact">Inquire for Case Study</a>
+                  </div>
+                </div>
               </div>
-            </div>
+            </article>
+
+            <!-- Card 3: Cow, Grass & Lion (Software & Technology Solutions) -->
+            <article class="project-card" data-category="software" id="project1">
+              <div class="project-gallery" title="Click to preview images">
+                <img src="image/logic3.jpeg" alt="Cow Grass Lion Game screenshot 1" loading="lazy" />
+                <img src="image/Logic.jpeg" alt="Cow Grass Lion Game screenshot 2" loading="lazy" />
+                <img src="image/logic2.png" alt="Cow Grass Lion Game screenshot 3" loading="lazy" />
+                <img src="image/logic3.png" alt="Cow Grass Lion Game screenshot 4" loading="lazy" />
+              </div>
+              <div class="project-body">
+                <span class="category-badge">Software &amp; Technology Solutions</span>
+                <div class="tags">
+                  <span>JavaScript (ES6+)</span><span>HTML5</span><span>CSS3</span><span>State Machine</span><span>Algorithmic Logic</span>
+                </div>
+                <h3>Cow, Grass &amp; Lion – Strategy Game <span class="badge">Live</span></h3>
+                <div class="project-details">
+                  <div class="project-detail-row">
+                    <span class="project-detail-label">Problem Addressed:</span> Demonstrating non-transitive, cyclical game theory dynamics (Lion > Cow > Grass > Lion) using clean computational logic without external gaming engines.
+                  </div>
+                  <div class="project-detail-row">
+                    <span class="project-detail-label">Project Objective:</span> Create an interactive strategy game with responsive state transitions, score tracking, and immediate player feedback.
+                  </div>
+                  <div class="project-detail-row">
+                    <span class="project-detail-label">My Contribution:</span> Programmed the complete game state logic, in-game interactive console, DOM event listeners, and responsive layout in vanilla JavaScript.
+                  </div>
+                  <div class="project-detail-row">
+                    <span class="project-detail-label">Outcome &amp; Functionality:</span> Fully interactive responsive browser strategy game with zero external dependencies and public repository on GitHub.
+                  </div>
+                </div>
+                <div class="project-meta">
+                  <div class="links">
+                    <a class="btn btn-amber" href="https://susan-awori.github.io/Cow-Grass-Lion-Game/" target="_blank" rel="noopener noreferrer">Live Demo →</a>
+                    <a class="btn btn-dark-outline" href="https://github.com/susan-awori/Cow-Grass-Lion-Game.git" target="_blank" rel="noopener noreferrer">Source Code</a>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Card 4: ScanPay – Dynamic QR Solution (Software & Technology Solutions) -->
+            <article class="project-card" data-category="software" id="project2">
+              <div class="project-gallery" title="Click to preview images">
+                <img src="image/scanpay.jpg" alt="ScanPay QR solution" loading="lazy" />
+                <img src="image/qrcode.png" alt="QR Code" loading="lazy" />
+                <img src="image/message.jpg" alt="Message confirmation" loading="lazy" />
+                <img src="image/camera.png" alt="Functional camera" loading="lazy" />
+              </div>
+              <div class="project-body">
+                <span class="category-badge">Software &amp; Technology Solutions</span>
+                <div class="tags">
+                  <span>JavaScript</span><span>HTML5 QRCode API</span><span>Mobile-First UX</span><span>FinTech</span>
+                </div>
+                <h3>ScanPay – Dynamic QR Solution <span class="badge">Featured</span></h3>
+                <div class="project-details">
+                  <div class="project-detail-row">
+                    <span class="project-detail-label">Problem Addressed:</span> Retail checkout friction and vulnerability to payment errors when using static merchant QR codes in low-bandwidth mobile settings.
+                  </div>
+                  <div class="project-detail-row">
+                    <span class="project-detail-label">Project Objective:</span> Design and implement a friction-free mobile checkout interface that generates unique, transaction-bound QR codes with instant verification.
+                  </div>
+                  <div class="project-detail-row">
+                    <span class="project-detail-label">My Contribution:</span> Researched mobile checkout patterns, built camera-based scanning integration, dynamic payload handling, and simulated payment confirmation.
+                  </div>
+                  <div class="project-detail-row">
+                    <span class="project-detail-label">Outcome &amp; Functionality:</span> Responsive UX case study and working scanner interface deployed on GitHub Pages.
+                  </div>
+                </div>
+                <div class="project-meta">
+                  <div class="links">
+                    <a class="btn btn-amber" href="https://susan-awori.github.io/Dynamic-QR-UX-Case/" target="_blank" rel="noopener noreferrer">Live Demo →</a>
+                    <a class="btn btn-dark-outline" href="https://github.com/mebjas/html5-qrcode" target="_blank" rel="noopener noreferrer">Source Code</a>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Card 5: Interactive Calendar Application (Software & Technology Solutions - Restored!) -->
+            <article class="project-card" data-category="software" id="project-calendar">
+              <div class="project-gallery" title="Click to preview images">
+                <img src="image/calendar1.png" alt="Interactive Calendar monthly interface" loading="lazy" />
+                <img src="image/calendar2.png" alt="Calendar date selection and event view" loading="lazy" />
+                <img src="image/calendar4.png" alt="Calendar responsive grid layout" loading="lazy" />
+                <img src="image/calendar.png" alt="Calendar application preview" loading="lazy" />
+              </div>
+              <div class="project-body">
+                <span class="category-badge">Software &amp; Technology Solutions</span>
+                <div class="tags">
+                  <span>JavaScript</span><span>CSS Grid</span><span>HTML5</span><span>Date API</span><span>Responsive Design</span>
+                </div>
+                <h3>Interactive Calendar Application <span class="badge">Live</span></h3>
+                <div class="project-details">
+                  <div class="project-detail-row">
+                    <span class="project-detail-label">Problem Addressed:</span> Need for a lightweight, dependency-free calendar interface for intuitive date traversal and timeline management.
+                  </div>
+                  <div class="project-detail-row">
+                    <span class="project-detail-label">Project Objective:</span> Develop a responsive calendar application with accurate month/year traversal, day calculation, and timeline event state representation.
+                  </div>
+                  <div class="project-detail-row">
+                    <span class="project-detail-label">My Contribution:</span> Programmed dynamic date logic, leap-year calculations, month/year switching algorithms, and mobile-responsive grid styling.
+                  </div>
+                  <div class="project-detail-row">
+                    <span class="project-detail-label">Outcome &amp; Functionality:</span> Fully functional live web application with active deployment and public GitHub repository.
+                  </div>
+                </div>
+                <div class="project-meta">
+                  <div class="links">
+                    <a class="btn btn-amber" href="https://susan-awori.github.io/SUU-CALENDAR/" target="_blank" rel="noopener noreferrer">Live Demo →</a>
+                    <a class="btn btn-dark-outline" href="https://github.com/susan-awori/SUU-CALENDAR" target="_blank" rel="noopener noreferrer">Source Code</a>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Card 6: UzaLeo – Seller Onboarding (Software & Technology Solutions) -->
+            <article class="project-card" data-category="software" id="project3">
+              <div class="project-gallery" title="Click to preview images">
+                <img src="image/uzaleo1.png" alt="UzaLeo homepage view" loading="lazy" />
+                <img src="image/uzaleo2.png" alt="UzaLeo laptop view" loading="lazy" />
+                <img src="image/uzaleo3.jpg" alt="UzaLeo community stories" loading="lazy" />
+                <img src="image/uzaleo4.jpg" alt="UzaLeo how it works" loading="lazy" />
+              </div>
+              <div class="project-body">
+                <span class="category-badge">Software &amp; Technology Solutions</span>
+                <div class="tags">
+                  <span>Semantic HTML5</span><span>CSS3 Grid &amp; Flexbox</span><span>Accessibility</span><span>Performance</span>
+                </div>
+                <h3>UzaLeo – Seller Onboarding Platform <span class="badge">Design</span></h3>
+                <div class="project-details">
+                  <div class="project-detail-row">
+                    <span class="project-detail-label">Problem Addressed:</span> High merchant drop-off rates during seller registration on digital commerce platforms due to complex navigation.
+                  </div>
+                  <div class="project-detail-row">
+                    <span class="project-detail-label">Project Objective:</span> Construct a high-performance, accessible onboarding landing page engineered for high conversion and clear informational flow.
+                  </div>
+                  <div class="project-detail-row">
+                    <span class="project-detail-label">My Contribution:</span> Architected clean semantic layout, high-contrast visual hierarchy, performance optimizations, and conversion-focused call-to-action sections.
+                  </div>
+                  <div class="project-detail-row">
+                    <span class="project-detail-label">Outcome &amp; Functionality:</span> Fast-loading, production-ready live onboarding platform with source code on GitHub.
+                  </div>
+                </div>
+                <div class="project-meta">
+                  <div class="links">
+                    <a class="btn btn-amber" href="https://susan-awori.github.io/uza-leo-seller-onboarding-page/" target="_blank" rel="noopener noreferrer">Live Demo →</a>
+                    <a class="btn btn-dark-outline" href="https://github.com/susan-awori/uza-leo-seller-onboarding-page" target="_blank" rel="noopener noreferrer">Source Code</a>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Card 7: AI UX & Human-AI Systems (AI & ML) -->
+            <article class="project-card" data-category="ai-ml" id="project-ai-ux">
+              <div class="project-gallery" title="Click to preview images">
+                <img src="image/tianyi-ma-WiONHd_zYI4-unsplash.jpg" alt="AI interaction design and human-AI systems research" loading="lazy" />
+                <img src="image/farzad-p-xSl33Wxyc-unsplash.jpg" alt="User experience flow and generative AI evaluation" loading="lazy" />
+              </div>
+              <div class="project-body">
+                <span class="category-badge">Artificial Intelligence &amp; Machine Learning</span>
+                <div class="tags">
+                  <span>Generative AI</span><span>Human-AI Interaction</span><span>Prompt Evaluation</span><span>UX Research</span>
+                </div>
+                <h3>Human-AI Interaction &amp; Explainable AI Study <span class="badge pending">Research</span></h3>
+                <div class="project-details">
+                  <div class="project-detail-row">
+                    <span class="project-detail-label">Problem Addressed:</span> The widening gap between AI model capabilities and user comprehension, causing mistrust and cognitive overload in non-technical users.
+                  </div>
+                  <div class="project-detail-row">
+                    <span class="project-detail-label">Project Objective:</span> Investigate human-centered design principles for generative AI interfaces, exploring explainability, guardrails, and feedback loops.
+                  </div>
+                  <div class="project-detail-row">
+                    <span class="project-detail-label">My Contribution:</span> Evaluated conversational interfaces, mapped user interaction friction points, and formulated design recommendations for transparent AI workflows.
+                  </div>
+                  <div class="project-detail-row">
+                    <span class="project-detail-label">Outcome &amp; Functionality:</span> Research synthesis and UI interaction models for accessible, human-centric AI-driven user experiences.
+                  </div>
+                </div>
+                <div class="project-meta">
+                  <div class="links">
+                    <a class="btn btn-dark-outline" href="index.html#contact">Inquire for Research Paper</a>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Card 8: Design & Creative Projects (Design & Creative) -->
+            <article class="project-card" data-category="design" id="project-design-showcase">
+              <div class="project-gallery" title="Click to preview images">
+                <img src="image/dealconnect_wfh.png" alt="DealConnect 5G Work From Home Campaign" loading="lazy" />
+                <img src="image/dealconnect_kids.png" alt="DealConnect Internet Campaign" loading="lazy" />
+                <img src="image/carols_collection.png" alt="Carol's Collection Branding" loading="lazy" />
+                <img src="image/mk_scents.png" alt="MK Scents Perfume Branding" loading="lazy" />
+              </div>
+              <div class="project-body">
+                <span class="category-badge">Design &amp; Creative Projects</span>
+                <div class="tags">
+                  <span>Brand Strategy</span><span>Social Media Marketing</span><span>Visual Communication</span><span>Digital Collateral</span>
+                </div>
+                <h3>Visual Identity &amp; Brand Strategy Showcase <span class="badge">15 Projects</span></h3>
+                <div class="project-details">
+                  <div class="project-detail-row">
+                    <span class="project-detail-label">Problem Addressed:</span> Effectively communicating technical and commercial value across diverse digital marketing and social media channels.
+                  </div>
+                  <div class="project-detail-row">
+                    <span class="project-detail-label">Project Objective:</span> Craft cohesive visual identities, high-converting social campaigns, and brand assets for retail, telecom, and service businesses.
+                  </div>
+                  <div class="project-detail-row">
+                    <span class="project-detail-label">My Contribution:</span> Led digital campaigns and produced over 15 distinct brand packages, campaign posters, and promotional graphics.
+                  </div>
+                  <div class="project-detail-row">
+                    <span class="project-detail-label">Outcome &amp; Functionality:</span> A complete dedicated showcase with category filtering and high-resolution image inspection.
+                  </div>
+                </div>
+                <div class="project-meta">
+                  <div class="links">
+                    <a class="btn btn-amber" href="designer.html">Explore 15 Design Projects →</a>
+                  </div>
+                </div>
+              </div>
+            </article>
+
           </div>
-        </article>
+        </div>
+      </section>
 
-      </div>
-    </section>
-
-    <section id="in-progress" class="completed-section">
-      <h2 class="section-title">IN PROGRESS</h2>
-      <div class="projects-grid">
-        <article class="project-card simple">
-          <div class="project-body">
-            <div class="tags"><span>React</span><span>Firebase</span></div>
-            <h3>E-Commerce App <span class="badge pending">Working</span></h3>
-            <p>React store with cart functionality, product filtering, and Firebase backend integration. Shopping cart state management and real-time inventory updates in progress.</p>
+      <!-- In Progress Section -->
+      <section id="in-progress" class="completed-section">
+        <div class="section-container" style="max-width: 1240px; margin: 0 auto;">
+          <h2 class="section-title">ACTIVE EXPERIMENTS &amp; IN PROGRESS</h2>
+          <div class="projects-grid">
+            <article class="project-card simple">
+              <div class="project-body">
+                <span class="category-badge">Software &amp; Technology Solutions</span>
+                <div class="tags"><span>React</span><span>Firebase</span><span>State Management</span></div>
+                <h3>E-Commerce Web Application <span class="badge pending">In Progress</span></h3>
+                <p>
+                  Modern web storefront with client-side state management, shopping cart operations, category filtering, and Firebase backend integration. Focus on clean component architecture and real-time inventory synchronization.
+                </p>
+              </div>
+            </article>
           </div>
-        </article>
-      </div>
-    </section>
-
-    <section id="to-do" class="completed-section">
-      <h2 class="section-title">TO DO</h2>
-      <div class="projects-grid">
-        <article class="project-card simple">
-          <div class="project-body">
-            <div class="tags"><span>AI</span><span>UX Research</span></div>
-            <h3>AI UX Case Study <span class="badge pending">Upcoming</span></h3>
-            <p>Upcoming research-driven UX project exploring how AI interfaces can be made more intuitive and human-centered for non-technical users.</p>
-          </div>
-        </article>
-      </div>
-    </section>
-
+        </div>
+      </section>
     </main>
 
     <!-- Lightbox Overlay for Image Previews -->
@@ -216,7 +415,7 @@
       </div>
     </div>
 
-    <!-- Footer (Small & Fancy) -->
+    <!-- Footer -->
     <footer class="site-footer">
       <div class="footer-container">
         <div class="footer-top-row">
@@ -227,7 +426,7 @@
               <span class="footer-role-badge">Projects</span>
             </div>
             <p class="footer-tagline">
-              Data Scientist &middot; Software Developer &middot; AI Specialist
+              Data Scientist &middot; Artificial Intelligence &middot; Machine Learning
             </p>
             <div class="footer-contact-chips">
               <a href="mailto:susanawori15@gmail.com" class="footer-contact-item" title="Send Email">
@@ -251,11 +450,11 @@
           <div class="footer-links-group">
             <nav class="footer-nav" aria-label="Footer Navigation">
               <a href="index.html#home" class="site-map-links">Home</a>
-              <a href="index.html#services" class="site-map-links">Services</a>
-              <a href="projects.html#completed" class="site-map-links">Projects</a>
-              <a href="designer.html" class="site-map-links">Designer</a>
-              <a href="index.html#about" class="site-map-links">About Me</a>
-              <a href="index.html#contact" class="site-map-links">Contact</a>
+              <a href="index.html#about" class="site-map-links">About</a>
+              <a href="index.html#expertise" class="site-map-links">Expertise</a>
+              <a href="projects.html" class="site-map-links">Projects</a>
+              <a href="designer.html" class="site-map-links">Design Showcase</a>
+              <a href="index.html#contact" class="site-map-links">Let's Connect</a>
             </nav>
 
             <div class="footer-social-pills" aria-label="Social media profiles">
@@ -275,17 +474,9 @@
                 <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 7h-7v2h7V7zm1.726 10c-.442 1.297-2.029 3-4.726 3-3.003 0-5-2.023-5-5.111 0-3.082 1.997-5.111 5-5.111 2.721 0 4.316 1.761 4.706 3.222.091.332-.143.689-.486.689h-6.22c.112 1.487 1.088 2.4 2.378 2.4 1.157 0 1.833-.518 2.148-1.166.115-.236.368-.383.633-.356l1.567.155a.573.573 0 0 1 .5 1.278zM17 13.2h3.9c-.1-1.1-.8-1.8-1.9-1.8-1.1 0-1.8.7-2 1.8zM8.5 13.5H3.5v3.5h5c1.4 0 2.2-.7 2.2-1.8 0-1-.8-1.7-2.2-1.7zM3.5 7v3.8h4.6c1.2 0 2-.6 2-1.9s-.8-1.9-2-1.9H3.5zM0 4.5h8.6c2.8 0 4.6 1.4 4.6 3.6 0 1.4-.7 2.6-1.9 3.2 1.6.6 2.7 2 2.7 3.8 0 2.6-2.1 4.4-5.2 4.4H0V4.5z"/></svg>
                 <span>Behance</span>
               </a>
-              <a href="https://dribbble.com/susan-awori" target="_blank" rel="noopener noreferrer" class="social-pill" title="Dribbble">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm7.9 9.38a8.2 8.2 0 0 1-3.66-.82 17.5 17.5 0 0 0-2.45 4.67 8.08 8.08 0 0 0 6.11-3.85zm-7.66 6.55a8 8 0 0 1-5.75-2.58 13.9 13.9 0 0 1 4.2-2.8 17.7 17.7 0 0 1 1.93 5.38h-.38zm-6.17-4.1a8.1 8.1 0 0 1-2-5.76 13.1 13.1 0 0 1 7.2 2.77 15.6 15.6 0 0 0-5.2 2.99zm1.74-7.23a8.1 8.1 0 0 1 4.54-2.48c.18 1.13.22 2.45.1 3.9a15 15 0 0 0-4.64-1.42zm6.36-2.44a8 8 0 0 1 4.86 3.1 14.6 14.6 0 0 1-4.22 1.76c.14-1.63.1-3.25-.64-4.86zm1.38 6.64a13 13 0 0 0 4.34-.74 8.1 8.1 0 0 1-.22 4.2 16.5 16.5 0 0 1-4.6-2.57 14.6 14.6 0 0 0 .48-.89z"/></svg>
-                <span>Dribbble</span>
-              </a>
               <a href="https://x.com/susan_awori" target="_blank" rel="noopener noreferrer" class="social-pill" title="Twitter / X">
                 <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
                 <span>Twitter/X</span>
-              </a>
-              <a href="https://www.instagram.com/suzisuu_/" target="_blank" rel="noopener noreferrer" class="social-pill" title="Instagram">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-                <span>Instagram</span>
               </a>
             </div>
           </div>
@@ -301,6 +492,7 @@
         </div>
       </div>
     </footer>
+
+    <script src="script.js"></script>
   </body>
-  <script src="script.js"></script>
 </html>
