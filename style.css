@@ -28,26 +28,26 @@
 }
 
 [data-theme="light"] {
-  --bg: #b39e7e;
-  --page-bg: #beaa8c;
+  --bg: #dbccb6;
+  --page-bg: #e3d5c1;
   --card: #ebdcc7;
-  --card-hover: #f2e5d3;
+  --card-hover: #f3e7d5;
   --text: #1a1d24;
-  --text-muted: #4a3f35;
-  --text-color-light: #4a3f35;
+  --text-muted: #52463b;
+  --text-color-light: #52463b;
   --amber: #e08b12;
   --amber-dark: #c77608;
   --amber-glow: rgba(224, 139, 18, 0.2);
-  --border-color: rgba(0, 0, 0, 0.1);
-  --header-bg: rgba(190, 170, 140, 0.94);
+  --border-color: rgba(0, 0, 0, 0.08);
+  --header-bg: rgba(227, 213, 193, 0.94);
   --primary-brown: #e08b12;
   --primary-color: #e08b12;
   --secondary-color: #e08b12;
-  --footer-bg: #b39e7e;
+  --footer-bg: #dbccb6;
   --footer-text: #1a1d24;
-  --footer-border: rgba(0, 0, 0, 0.1);
+  --footer-border: rgba(0, 0, 0, 0.08);
   --footer-pill-bg: #ebdcc7;
-  --footer-pill-border: rgba(0, 0, 0, 0.1);
+  --footer-pill-border: rgba(0, 0, 0, 0.08);
   --footer-pill-hover: rgba(224, 139, 18, 0.15);
 }
 
