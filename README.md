@@ -124,5 +124,7 @@ The visual assets used in this portfolio were sourced from high-quality photogra
 - **Email:** susanawori15@gmail.com
 - **LinkedIn:** [linkedin.com/in/susan-awori](https://www.linkedin.com/in/susan-awori)
 - **GitHub:** [github.com/susan-awori](https://github.com/susan-awori)
+- **Kaggle:** [kaggle.com/susanawori](https://www.kaggle.com/susanawori)
+- **DEV:** [dev.to/susan_awori](https://dev.to/susan_awori)
 - **Medium:** [medium.com/@susan-awori](https://medium.com/@susan-awori/)
 - **Location:** Nairobi, Kenya
