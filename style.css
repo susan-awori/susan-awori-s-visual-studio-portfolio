@@ -25,6 +25,9 @@
   --footer-pill-border: rgba(255, 255, 255, 0.09);
   --footer-pill-hover: rgba(255, 159, 28, 0.12);
   --transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+  --font-display: "Archivo", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  --font-body: "Source Serif 4", Georgia, Cambria, "Times New Roman", serif;
+  --font-mono: "DM Mono", SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
 [data-theme="light"] {
@@ -58,14 +61,60 @@ html {
 
 body {
   margin: 0;
-  font-family: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+  font-family: var(--font-body);
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  line-height: 1.6;
+  line-height: 1.68;
   background: var(--page-bg);
   color: var(--text);
   transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* ==========================================================================
+   GLOBAL TYPOGRAPHY RULES (Archivo / Source Serif 4 / DM Mono)
+   ========================================================================== */
+h1, h2, h3, h4, h5, h6,
+.hero-title,
+.hero-tagline,
+.designer-hero h1,
+.section-header-jojo h2,
+.section-header h2,
+.service-header h3,
+.project-body h3,
+.contact-info-side h2,
+.design-info h3,
+.project-modal-title {
+  font-family: var(--font-display);
+  letter-spacing: -0.015em;
+}
+
+nav.nav-menu a,
+.btn,
+.hero-top-badge,
+.sub-badge,
+.category-badge,
+.designer-badge,
+.service-num,
+.tags span,
+.service-tags span,
+.c-item label,
+.strip-label,
+.ticker-track,
+.stat-label,
+.project-detail-label,
+.project-tab,
+.designer-tab,
+.filter-btn,
+.footer-nav a,
+.footer-pill,
+.badge,
+.section-tag,
+.project-stat-label,
+.meta-item label,
+.form-note,
+.tech-tag {
+  font-family: var(--font-mono);
 }
 
 /* ==========================================================================
@@ -115,8 +164,11 @@ nav.nav-menu a {
   padding: 8px 16px;
   text-decoration: none;
   color: var(--text-muted);
-  font-weight: 600;
-  font-size: 0.92rem;
+  font-weight: 500;
+  font-size: 0.84rem;
+  font-family: var(--font-mono);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
   border-radius: 20px;
   transition: var(--transition);
 }
@@ -465,7 +517,7 @@ nav.nav-menu a.active-nav {
   font-size: 2.5rem;
   color: var(--amber);
   line-height: 1;
-  font-family: Georgia, serif;
+  font-family: var(--font-body);
 }
 
 .quote-box p {
@@ -1103,7 +1155,7 @@ nav.nav-menu a.active-nav {
   font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.04em;
-  font-family: monospace;
+  font-family: var(--font-mono);
   border: 1px solid rgba(255, 159, 28, 0.2);
 }
 
