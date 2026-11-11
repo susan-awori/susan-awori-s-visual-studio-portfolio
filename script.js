@@ -263,4 +263,64 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+
+  // Live ML Telemetry Demo Animation Loop (Inspired by reference)
+  (function initDemo() {
+    const demo = document.getElementById("demo");
+    const req1 = document.getElementById("req1");
+    const req2 = document.getElementById("req2");
+    const led1 = document.getElementById("led1");
+    const led2 = document.getElementById("led2");
+    const count = document.getElementById("count");
+    if (!demo || !req1 || !req2 || !led1 || !count) return;
+
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (reduce) return;
+
+    let timers = [];
+    const clearTimers = () => { timers.forEach(clearTimeout); timers = []; };
+    const at = (ms, fn) => timers.push(setTimeout(fn, ms));
+
+    function cycle() {
+      demo.classList.add("anim");
+      req1.classList.remove("on");
+      req2.classList.remove("on");
+      led1.classList.remove("on");
+      if (led2) led2.classList.remove("on");
+
+      at(600, () => req1.classList.add("on"));
+      at(1300, () => {
+        led1.classList.add("on");
+        if (led2) led2.classList.add("on");
+        const currentCount = parseInt(count.textContent.replace(/,/g, ''), 10) || 128450;
+        count.textContent = (currentCount + 1).toLocaleString();
+      });
+      at(2200, () => req2.classList.add("on"));
+      at(7000, cycle);
+    }
+
+    let running = false;
+    if ("IntersectionObserver" in window) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting && !running) {
+            running = true;
+            cycle();
+          } else if (!e.isIntersecting && running) {
+            running = false;
+            clearTimers();
+            demo.classList.remove("anim");
+            req1.classList.add("on");
+            req2.classList.add("on");
+            led1.classList.add("on");
+            if (led2) led2.classList.add("on");
+          }
+        });
+      }, { threshold: 0.3 });
+      observer.observe(demo);
+    } else {
+      cycle();
+    }
+  })();
+
 });

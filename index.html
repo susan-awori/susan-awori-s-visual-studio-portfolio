@@ -21,12 +21,7 @@
     <!-- Header Navigation -->
     <header>
       <div class="logo">
-        <img
-          src="image/logo.jpg"
-          alt="Susan Awori picture"
-          class="header-image"
-        />
-        <span></span>
+        <a href="#home" class="brand">Susan Awori</a>
       </div>
 
       <nav id="mobileNav" class="nav-menu">
@@ -57,80 +52,131 @@
     </header>
 
     <main>
-      <!-- Hero Section -->
+      <!-- Hero Section (Editorial Layout) -->
       <section id="home" class="hero-jojo">
         <div class="hero-container">
-          <div class="hero-top-badge">
-            <span class="badge-icon">✨</span>
-            <span>Data Scientist | Artificial Intelligence | Machine Learning</span>
-          </div>
+          <div class="hero-grid">
+            <!-- Left Column: Identity, Colossal Title, Bio, Facts, Actions -->
+            <div class="hero-main-col">
+              <div class="idblock">
+                <img
+                  src="image/logo.jpg"
+                  alt="Susan Awori"
+                  class="id-avatar"
+                  width="72"
+                  height="72"
+                />
+                <div class="id-text">
+                  <p class="eyebrow">Statement of work</p>
+                  <p class="idmeta">Nairobi, Kenya &bull; Data Science &amp; AI</p>
+                </div>
+              </div>
 
-          <h1 class="hero-title">
-            I'm <span class="highlight-amber">Susan Awori</span>
-          </h1>
-          <div class="hero-tagline">
-            Turning Data into Insights. <span class="highlight-amber">Building Intelligence for Tomorrow.</span>
-          </div>
-          <p class="hero-subtitle">
-            I'm Susan Awori, a Data Scientist interested in transforming data into meaningful insights and developing intelligent solutions through Artificial Intelligence and Machine Learning. I explore the intersection of data, technology, and innovation to solve problems and create meaningful impact.
-          </p>
+              <h1 class="hero-giant-name">
+                <span>Susan</span>
+                <span>Awori</span>
+              </h1>
 
-          <!-- Main Hero Card Showcase -->
-          <div class="hero-card-showcase">
-            <!-- Social Bar (Left) -->
-            <div class="hero-social-strip">
-              <span class="strip-label">Follow Me</span>
-              <a href="https://www.linkedin.com/in/susan-awori" target="_blank" title="LinkedIn">LinkedIn</a>
-              <a href="https://github.com/susan-awori" target="_blank" title="GitHub">GitHub</a>
-              <a href="https://medium.com/@susan-awori/" target="_blank" title="Medium">Medium</a>
-              <a href="https://dev.to/susan_awori" target="_blank" title="DEV Community">DEV</a>
-              <a href="https://www.kaggle.com/susanawori" target="_blank" title="Kaggle">Kaggle</a>
-              <a href="https://x.com/susan_awori" target="_blank" title="Twitter/X">Twitter/X</a>
+              <p class="hero-role">
+                Data Scientist &bull; Artificial Intelligence &amp; Machine Learning
+              </p>
+
+              <div class="hero-lede">
+                <p class="hero-tagline-text">
+                  Turning Data into Insights. <strong>Building Intelligence for Tomorrow.</strong>
+                </p>
+                <p class="hero-bio-text">
+                  I'm Susan Awori, a Data Scientist interested in transforming data into meaningful insights and developing intelligent solutions through Artificial Intelligence and Machine Learning. I explore the intersection of data, technology, and innovation to solve problems and create meaningful impact.
+                </p>
+              </div>
+
+              <!-- Quick Facts -->
+              <dl class="hero-facts">
+                <div class="fact">
+                  <dt>Status</dt>
+                  <dd><span class="live-dot"></span> Open to Data Science &amp; AI opportunities</dd>
+                </div>
+                <div class="fact">
+                  <dt>Based</dt>
+                  <dd>Nairobi, Kenya &bull; Open to remote</dd>
+                </div>
+                <div class="fact">
+                  <dt>Specialisation</dt>
+                  <dd>Data Science, Predictive Modelling &amp; AI Systems</dd>
+                </div>
+                <div class="fact">
+                  <dt>Core Stack</dt>
+                  <dd>Python, SQL, Scikit-learn, Pandas, AI Tools</dd>
+                </div>
+              </dl>
+
+              <!-- Actions & CTAs -->
+              <div class="hero-actions">
+                <a href="projects.html" class="btn btn-amber">Explore My Projects</a>
+                <a href="#contact" class="btn btn-outline">Let's Connect</a>
+                <a
+                  href="assets/Susan_Resume_2026.pdf"
+                  download="Susan_Resume_2026.pdf"
+                  class="btn btn-quiet"
+                >
+                  Download CV
+                </a>
+              </div>
+
+              <!-- Social Links Row -->
+              <div class="hero-social-row">
+                <span class="social-label">Connect:</span>
+                <a href="https://www.linkedin.com/in/susan-awori" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <span class="sep">&bull;</span>
+                <a href="https://github.com/susan-awori" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <span class="sep">&bull;</span>
+                <a href="https://www.kaggle.com/susanawori" target="_blank" rel="noopener noreferrer">Kaggle</a>
+                <span class="sep">&bull;</span>
+                <a href="https://dev.to/susan_awori" target="_blank" rel="noopener noreferrer">DEV</a>
+                <span class="sep">&bull;</span>
+                <a href="https://medium.com/@susan-awori/" target="_blank" rel="noopener noreferrer">Medium</a>
+                <span class="sep">&bull;</span>
+                <a href="https://x.com/susan_awori" target="_blank" rel="noopener noreferrer">Twitter/X</a>
+              </div>
             </div>
 
-            <!-- Central Portrait Image Container -->
-            <div class="hero-image-box">
-              <img
-                src="image/christin-hume-mfB1B1s4sMc-unsplash.jpg"
-                alt="Susan Awori workspace and tech setup"
-                class="hero-portrait"
-              />
-              <div class="hero-image-overlay"></div>
-              
-              <!-- Floating Skill Badges -->
-              <div class="floating-badge badge-1">
-                <span class="f-icon">📊</span> Data Science
-              </div>
-              <div class="floating-badge badge-2">
-                <span class="f-icon">🤖</span> Artificial Intelligence
-              </div>
-              <div class="floating-badge badge-3">
-                <span class="f-icon">⚙️</span> Machine Learning
-              </div>
-            </div>
+            <!-- Right Column: Interactive Pipeline / Model Telemetry Demo -->
+            <div class="hero-demo-col">
+              <div class="demo" id="demo" role="region" aria-label="Live model inference pipeline telemetry">
+                <div class="demo-head">
+                  <span>POST /INFERENCE/PREDICT</span>
+                  <span class="live-status"><span class="live-dot"></span> LIVE</span>
+                </div>
+                <div class="demo-body">
+                  <p class="demo-label">Incoming Data Stream</p>
+                  <div class="req on" id="req1">
+                    <span class="req-ref">eval.stream &bull; model=trade_pass_v2 &bull; batch=32</span>
+                    <span class="req-tag tag-ok" id="tag1">ACCEPTED</span>
+                  </div>
+                  <div class="req on dup" id="req2">
+                    <span class="req-ref">data.cleaning &bull; null_impute=complete &bull; try 1</span>
+                    <span class="req-tag tag-ok" id="tag2">PROCESSED</span>
+                  </div>
 
-            <!-- Professional Focus & CTAs (Right) -->
-            <div class="hero-cta-box">
-              <div class="hero-focus-title">Professional Focus</div>
-              <div class="hero-focus-list">
-                <div class="hero-focus-item"><span>📊</span> Data Science &amp; Analytics</div>
-                <div class="hero-focus-item"><span>🤖</span> Artificial Intelligence</div>
-                <div class="hero-focus-item"><span>⚙️</span> Machine Learning</div>
-                <div class="hero-focus-item creative"><span>💡</span> Practical Intelligent Solutions</div>
-              </div>
+                  <div class="demo-ledger">
+                    <p class="demo-label">Model Telemetry &amp; Outputs</p>
+                    <div class="led-row on" id="led1">
+                      <span>trade_pass_v2 &bull; confidence_score</span>
+                      <span class="led-amt">98.4%</span>
+                    </div>
+                    <div class="led-row on" id="led2" style="margin-top: 6px;">
+                      <span>predictive_latency &bull; avg_response</span>
+                      <span class="led-amt">14ms</span>
+                    </div>
+                  </div>
 
-              <div class="quote-box">
-                <span class="quote-mark">“</span>
-                <p>Turning data into insights. Building intelligence for tomorrow.</p>
-              </div>
-
-              <div class="hero-btn-group">
-                <a href="projects.html" class="btn btn-amber">
-                  Explore My Projects <span class="arrow">→</span>
-                </a>
-                <a href="#contact" class="btn btn-dark-outline">
-                  Let's Connect
-                </a>
+                  <div class="demo-foot">
+                    <span>
+                      Inferences evaluated: <b id="count">128,450</b>
+                    </span>
+                    <span>Continuous Pipeline</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
