@@ -1,0 +1,11 @@
+.btn-outline {
+  background: transparent;
+  border: 1.5px solid var(--border-color, rgba(255, 255, 255, 0.08));
+  color: var(--text, #f5f5f7) !important;
+}
+
+.btn-outline:hover {
+  border-color: var(--amber, #ff9f1c);
+  color: var(--amber, #ff9f1c) !important;
+  transform: translateY(-2px);
+}
